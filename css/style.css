@@ -1,0 +1,33 @@
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.page__container {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.logo {
+  text-align: center; }
+
+.logo__link {
+  display: inline-block;
+  position: relative; }
+
+.logo__link::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: url("../img/mishka-logo-hover.png");
+  z-index: 0; }
+
+.logo__link:hover .logo__image {
+  opacity: 0; }
+
+.logo__link:active:after {
+  content: url("../img/mishka-logo-down.png"); }
