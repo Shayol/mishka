@@ -1,0 +1,16 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+$top-menu-height: 6em;
+
+$tablet: 600px;
+$desktop: 900px;
+
+$hover-color: #b0b0b0;
+$down-color: #e7e7e7;

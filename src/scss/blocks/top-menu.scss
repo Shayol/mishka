@@ -1,0 +1,50 @@
+.top-menu {
+    height: $top-menu-height;
+ 
+    &__container {
+         width: 86%;
+         height: 100%;
+         margin-left: auto;
+         margin-right: auto;
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+ 
+         @media(min-width: $tablet) {
+             justify-content: stretch;
+         }
+     }
+ 
+     &__menu {
+         width: 8%;
+ 
+         @media(min-width: $tablet) {
+             display: none;
+         }
+     }
+ 
+     &__search {
+         flex-basis: $top-menu-height;
+         height: 100%;
+     }
+ 
+     &__logo {
+ 
+         margin-right: 42%;
+ 
+         @media(min-width: $tablet) {
+             flex-basis: 45%;
+             margin-right: 0;
+         }
+     }
+ 
+     &__cart {
+ 
+         display: none; 
+ 
+         @media(min-width: $tablet) {
+             flex-grow: 1;
+             display: block;
+         }        
+     }
+ }

@@ -1,0 +1,55 @@
+.logo {
+    text-align: center;
+    transform: translateX(46px);
+
+    &__link {
+        display: inline-block;
+        position: relative;
+    }
+
+    @media (min-width: $tablet) {
+        transform: none;
+        text-align: left;
+    }
+
+    @media (min-width: $desktop) {
+        &__link::before, &__link::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        
+        }
+
+        &__link::before { 
+            content: url('../img/mishka-logo-hover.png');
+        }
+
+        &__link::after { 
+            content: url('../img/mishka-logo-down.png');
+        }
+        
+        &__link:hover .logo__image {
+            opacity: 0;
+        }
+
+        &__link:active .logo__image {
+            opacity: 0;
+        }
+
+        &__link:hover:before {
+            opacity: 1;
+        }
+
+        &__link:active:before {
+            opacity: 0;
+        }
+        
+        &__link:active:after {
+            opacity: 1;
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+.search {
+    display: none;
+    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+
+    &__icon {
+        display: inline-block;
+        outline: none;
+        width: 18px;
+        height: 18px;
+        background: url("../img/search.png") no-repeat;
+        position: relative;
+
+    }
+
+    @media (min-width: $desktop) {
+
+        &__icon:hover {
+            background: url('../img/search-hover.png') no-repeat;        
+        }
+        
+        
+        &__icon:active {
+            background: url('../img/search-down.png') no-repeat;
+        }
+    }
+
+
+    @media (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

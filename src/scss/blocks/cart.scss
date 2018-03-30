@@ -1,0 +1,38 @@
+.cart {
+
+    &__icon {
+        display: inline-block;
+        width: 21px;
+        height: 18px;
+        background: url('../img/cart.png') no-repeat;
+        margin: 0 1.5em;
+        outline: none;
+    }
+
+    &__content {
+        font-weight: bold;
+        font-size: 110%;
+        display: inline-block;
+    }
+
+    @media(min-width: $desktop) {
+        &:hover &__content {
+            color: $hover-color;
+        }
+    
+        &:hover &__icon {
+            background: url('../img/cart-hover.png') no-repeat;        
+        }
+        
+        
+        &:active &__icon {
+            background: url('../img/cart-down.png') no-repeat;
+        }
+
+        &:active &__content {
+            color: $down-color;
+        }
+
+    }
+
+}
