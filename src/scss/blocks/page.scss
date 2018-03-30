@@ -1,5 +1,20 @@
-.page__container {
-    max-width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
+.page {
+    &__top-menu {
+        height: $top-menu-height;
+    }
+
+    &__container {
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    &__item {
+        width: 86%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
+

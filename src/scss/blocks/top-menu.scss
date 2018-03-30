@@ -1,11 +1,6 @@
 .top-menu {
-    height: $top-menu-height;
  
     &__container {
-         width: 86%;
-         height: 100%;
-         margin-left: auto;
-         margin-right: auto;
          display: flex;
          justify-content: flex-end;
          align-items: center;
