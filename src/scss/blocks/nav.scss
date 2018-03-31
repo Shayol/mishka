@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: $tablet) {
+        width: 86%;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+
+    &__item {
+        color: white;
+        font-size: 1.4em;
+        padding: 1.2em 7%;
+        font-weight: bold;
+    }
+
+    &__item--interior {
+        background: url('../img/lamp.png') right 7% center no-repeat, #63d1bb;
+    }
+
+    &__item--toys {
+        background: url('../img/toys.png') right 7% center no-repeat, #56c3b2;
+    }
+}

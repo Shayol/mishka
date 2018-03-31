@@ -1,7 +1,4 @@
 .page {
-    &__top-menu {
-        height: $top-menu-height;
-    }
 
     &__container {
         max-width: 1050px;
@@ -13,7 +10,21 @@
         width: 86%;
         height: 100%;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto; 
+    }
+
+    &__top-menu {
+        height: $top-menu-height;
+    }
+
+    &__hero {
+        height: 60vh;
+    }
+
+    &__nav {
+        position: relative;
+        top: -15.5vh;
+        z-index: 2;
     }
     
 }
