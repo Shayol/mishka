@@ -21,10 +21,10 @@
     }
 
     &__hero {
-        height: 60vh;
+        height: $hero-height-mobile;
 
         @media(min-width: $tablet) { 
-            height: 80vh;
+            height: $hero-height-tablet-desktop;
         }
 
     }

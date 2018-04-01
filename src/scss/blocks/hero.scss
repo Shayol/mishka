@@ -2,7 +2,7 @@
     background-image: url('../img/hero-mobile.png');
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    background-size: auto 55vh;
+    background-size: auto $hero-height-mobile * 1.24;
     position: relative;
 
     &__title {
@@ -24,6 +24,6 @@
 
     @media(min-width: $tablet) { 
         background-image: url('../img/hero-desktop-tablet.png');
-        background-size: auto 80vh;
+        background-size: auto $hero-height-tablet-desktop * 1.19;
     }
 }

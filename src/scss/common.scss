@@ -8,11 +8,14 @@ body {
     font-family: Verdana, sans-serif;
 }
 
-$top-menu-height-mobile: 4.75em;
-$top-menu-height-tablet-desktop: 5.5em;
+$top-menu-height-mobile: 12.5vh;
+$top-menu-height-tablet-desktop: 5.5rem;
 
 $tablet: 600px;
 $desktop: 900px;
+
+$hero-height-mobile: 45vh;
+$hero-height-tablet-desktop: 39.2rem;
 
 $hover-color: #b0b0b0;
 $down-color: #e7e7e7;

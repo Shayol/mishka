@@ -9,10 +9,15 @@
     }
 
     &__item {
+        height: 16vh;
         color: white;
         font-size: 22px;
-        padding: 20px 7%;
+        padding: 0 7%;
         font-weight: bold;
+
+        @media(min-width: $tablet) { 
+            height: 6.5em;
+        }
     }
 
     &__item--interior {
