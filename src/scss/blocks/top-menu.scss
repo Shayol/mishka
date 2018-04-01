@@ -30,8 +30,12 @@
      }
  
      &__search {
-         flex-basis: $top-menu-height;
+         flex-basis: $top-menu-height-mobile;
          height: 100%;
+
+         @media(min-width: $tablet) { 
+            flex-basis: $top-menu-height-tablet-desktop;
+         }
      }
  
      &__logo {

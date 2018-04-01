@@ -14,7 +14,10 @@
     }
 
     &__top-menu {
-        height: $top-menu-height;
+        height: $top-menu-height-mobile;
+        @media(min-width: $tablet) { 
+            height: $top-menu-height-tablet-desktop;
+        }
     }
 
     &__hero {
@@ -26,15 +29,15 @@
 
     }
 
-    &__nav {
-        position: relative;
-        top: -15.5vh;
-        z-index: 2;
+    // &__nav {
+    //     position: relative;
+    //     top: -15.5vh;
+    //     z-index: 2;
 
-        @media(min-width: $tablet) { 
-            top: 0;
-        }
-    }
+    //     @media(min-width: $tablet) { 
+    //         top: 0;
+    //     }
+    // }
     
 }
 
