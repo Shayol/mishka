@@ -6,7 +6,18 @@
          align-items: center;
  
          @media(min-width: $tablet) {
-             justify-content: stretch;
+            justify-content: stretch;
+         }
+
+     }
+
+     &__link {
+         display: none;
+
+         @media(min-width: $desktop) {
+            height: 100%;
+            flex-basis: 20%;
+            display: flex;
          }
      }
  
@@ -30,6 +41,10 @@
          @media(min-width: $tablet) {
              flex-basis: 45%;
              margin-right: 0;
+         }
+
+         @media(min-width: $desktop) {
+             flex-basis: 25%;
          }
      }
  

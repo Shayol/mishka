@@ -10,16 +10,22 @@
 
     &__item {
         color: white;
-        font-size: 1.4em;
-        padding: 1.2em 7%;
+        font-size: 22px;
+        padding: 20px 7%;
         font-weight: bold;
     }
 
     &__item--interior {
-        background: url('../img/lamp.png') right 7% center no-repeat, #63d1bb;
+        background: url('../img/lamp.png') right 7% top 17px no-repeat, #63d1bb;
     }
 
     &__item--toys {
-        background: url('../img/toys.png') right 7% center no-repeat, #56c3b2;
+        background: url('../img/toys.png') right 7% top 20px no-repeat, #56c3b2;
     }
+
+    &__item:hover {
+        padding-bottom: 25px;
+    }
+
+
 }

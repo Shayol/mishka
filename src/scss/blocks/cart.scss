@@ -15,7 +15,7 @@
         display: inline-block;
     }
 
-    @media(min-width: $desktop) {
+    @media(min-width: $tablet) {
         &:hover &__content {
             color: $hover-color;
         }

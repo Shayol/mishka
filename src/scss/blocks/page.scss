@@ -19,12 +19,21 @@
 
     &__hero {
         height: 60vh;
+
+        @media(min-width: $tablet) { 
+            height: 80vh;
+        }
+
     }
 
     &__nav {
         position: relative;
         top: -15.5vh;
         z-index: 2;
+
+        @media(min-width: $tablet) { 
+            top: 0;
+        }
     }
     
 }

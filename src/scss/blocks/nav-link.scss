@@ -1,0 +1,18 @@
+.nav-link { 
+
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 110%;
+    }
+
+    &\--catalog-top-menu {
+        border-right: 1px solid #ececec;
+    }
+    
+}

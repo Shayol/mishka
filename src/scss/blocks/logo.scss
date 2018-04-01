@@ -13,6 +13,9 @@
     }
 
     @media (min-width: $desktop) {
+
+        text-align: center;
+
         &__link::before, &__link::after {
             position: absolute;
             top: 0;
