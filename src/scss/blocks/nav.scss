@@ -6,32 +6,36 @@
         width: 86%;
         margin-left: auto;
         margin-right: auto; 
+        flex-direction: row;
     }
 
     &__item {
         height: 16vh;
         color: white;
-        font-size: 22px;
+        line-height: 1.4em;
+        font-size: 20px;
         padding: 0 7%;
         font-weight: bold;
 
         @media(min-width: $tablet) { 
+            font-size: 22px;
             height: initial;
-            padding-top:  2.5rem;
-            padding-bottom: 2.5rem;
+            width: 50%;
+            padding-top:  35px;
+            padding-bottom: 35px;
         }
     }
 
     &__item--interior {
-        background: url('../img/lamp.png') right 7% top 17px no-repeat, #63d1bb;
+        background: url('../img/lamp.png') right 7% top 30px no-repeat, #63d1bb;
     }
 
     &__item--toys {
-        background: url('../img/toys.png') right 7% top 20px no-repeat, #56c3b2;
+        background: url('../img/toys.png') right 7% top 32px no-repeat, #56c3b2;
     }
 
     &__item:hover {
-        padding-bottom: 25px;
+        padding-bottom: 40px;
     }
 
 
