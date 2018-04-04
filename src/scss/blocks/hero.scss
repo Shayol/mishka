@@ -5,6 +5,10 @@
     background-size: auto $hero-height-mobile * 1.24;
     position: relative;
 
+    &__top-links {
+        height: 40px;
+    }
+
     &__title {
         font-size: 1.6rem;
         font-weight: 600;

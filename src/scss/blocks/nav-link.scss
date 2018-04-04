@@ -1,18 +1,21 @@
 .nav-link { 
 
     align-items: center;
-    justify-content: center;
 
     &__text {
         display: inline-block;
         color: black;
         text-decoration: none;
         font-weight: bold;
-        font-size: 110%;
+        font-size: 105%;
     }
 
-    &\--catalog-top-menu {
+    &\--catalog {
         border-right: 1px solid #ececec;
+    }
+
+    &\--knitting {
+        padding-left: 3%;
     }
     
 }
