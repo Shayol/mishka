@@ -10,6 +10,14 @@
         font-size: 105%;
     }
 
+    &__text:hover {
+        color: $hover-color;
+    }
+
+    &__text:active {
+        color: $down-color;
+    }
+
     &\--catalog {
         border-right: 1px solid #ececec;
     }
@@ -17,5 +25,7 @@
     &\--knitting {
         padding-left: 3%;
     }
+
+
     
 }

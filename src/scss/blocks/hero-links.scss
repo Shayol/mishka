@@ -12,6 +12,14 @@
             font-size: 98%;
         }
 
+        &__text:hover {
+            color: $hover-color;
+        }
+
+        &__text:active {
+            color: $down-color;
+        }
+
         &__item--new-arrivals, &__item--sale {
             display: none;
             width: 21%;
