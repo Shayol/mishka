@@ -1,6 +1,5 @@
 .top-menu {
  
-    &__container {
          display: flex;
          justify-content: flex-end;
          align-items: center;
@@ -9,7 +8,6 @@
             justify-content: stretch;
          }
 
-     }
 
      &__link {
          display: none;
