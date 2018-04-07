@@ -43,7 +43,7 @@
     }
 
     &__item--interior {
-        background: url('../img/lamp.png') right 7% top 23px no-repeat, #63d1bb;
+        background: url('../img/lamp.png') right 7% top 23px no-repeat, $green-color;
 
         @media(min-width: $tablet) { 
             background-position-y: 30px; 
@@ -56,7 +56,7 @@
                 width: 100%;
                 top: 100%;
                 left: 0;
-                background: url('../img/wave.png') top right 17.8% no-repeat, #63d1bb;
+                background: url('../img/wave.png') top right 17.8% no-repeat, $green-color;
                 background-size: 230%;
             }
         }

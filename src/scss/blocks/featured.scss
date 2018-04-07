@@ -1,0 +1,49 @@
+.featured {
+
+    padding-top: 34px; 
+    background: url('../img/featured.png') center bottom 160px no-repeat; 
+    &__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__product-name {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $green-color;
+        font-weight: bold;
+    }
+
+    &__product {
+        margin-top: 30px;
+    }
+
+    &__description {
+        margin-bottom: 34px;
+        line-height: 1.5em;
+    }
+
+    &__characteristic {
+        display: flex; 
+    }
+
+    &__parameter {
+        flex-basis: 40%;
+    }
+
+    &__data {
+        flex-basis: 60%;
+    }
+
+    &__price {
+        text-align: center;
+        font-size: 102%;
+        font-weight: bold;
+        margin-top: 375px;
+    }
+}
