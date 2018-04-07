@@ -1,35 +1,66 @@
 .featured {
 
-    padding-top: 34px; 
-    background: url('../img/featured.png') center bottom 160px no-repeat; 
-    &__header {
-        display: flex;
-        flex-direction: column;
+    padding: 34px 0; 
+    @media(min-width: $tablet) { 
+        padding: 50px 0;
+    }
+
+    &__content {
+        @media(min-width: $tablet) { 
+            display: grid;
+            grid-template-columns: 50% 35% 15%;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: 
+                "name name title"
+                "product photo photo"
+                "priceAndOrder photo photo";
+         }
+         grid-row-gap: 3rem;
     }
 
     &__product-name {
         font-size: 1.6rem;
         font-weight: bold;
         margin-bottom: 8px;
+        grid-area: name;
+        @media(min-width: $tablet) { 
+            font-size: 2.5em;
+        }
+
     }
 
     &__title {
         text-transform: uppercase;
+        text-align: center;
         color: $green-color;
         font-weight: bold;
+        grid-area: title;
+        align-self: center;
     }
 
     &__product {
         margin-top: 30px;
+        grid-area: product;
+        @media(min-width: $tablet) { 
+            margin: 0 13% 0 0;
+        }
+
     }
 
     &__description {
         margin-bottom: 34px;
-        line-height: 1.5em;
+
+        @media(min-width: $tablet) { 
+            margin-bottom: 3rem;
+        }
+
     }
 
     &__characteristic {
         display: flex; 
+        border-bottom: 1px solid #ececec;
+        height: 2.5em;
+        align-items: center;
     }
 
     &__parameter {
@@ -40,10 +71,48 @@
         flex-basis: 60%;
     }
 
+    &__photo {
+        grid-area: photo;
+        margin: 28px 0;
+        @media(min-width: $tablet) { 
+            margin: 0;
+        }
+
+        // background: url('../img/featured.png') center center cover no-repeat; 
+        // background-size: 100% auto;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        grid-area: photo;
+    }
+
+    &__price-and-order {
+        grid-area: priceAndOrder;
+        @media(min-width: $tablet) { 
+            margin: 0;
+            align-self: end;
+            margin-right: 13%;
+        }
+    }
+
     &__price {
         text-align: center;
-        font-size: 102%;
+        font-size: 1em;
         font-weight: bold;
-        margin-top: 375px;
+        margin-bottom: 1.75em;
+        @media(min-width: $tablet) { 
+            font-size: 1.2em;
+        }
+    }
+
+    &__order {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 2px solid black;
+        text-align: center;
     }
 }
