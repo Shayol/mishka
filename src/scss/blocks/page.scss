@@ -23,24 +23,29 @@
         }
     }
 
-    &__hero {
-        height: $hero-height-mobile;
-
-        @media(min-width: $tablet) { 
-            height: $hero-height-tablet-desktop;
-        }
-
+    &__hero\--index {
+        height: $hero-height-mobile--index;
     }
 
-    // &__nav {
-    //     position: relative;
-    //     top: -15.5vh;
-    //     z-index: 2;
+    &__hero\--catalog {
+        height: $hero-height-mobile--catalog;
+    }
 
-    //     @media(min-width: $tablet) { 
-    //         top: 0;
-    //     }
-    // }
+    @media(min-width: $tablet) { 
+        &__hero\--index { 
+            height: $hero-height-tablet-desktop--index;
+        }
+
+        &__hero\--catalog { 
+            height: $hero-height-tablet--catalog;
+        }
+    }
+
+    @media(min-width: $desktop) { 
+        &__hero\--catalog { 
+            height: $hero-height-desktop--catalog;
+        }
+    }
     
 }
 

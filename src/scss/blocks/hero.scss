@@ -1,10 +1,14 @@
 .hero {
-    background-image: url('../img/hero-mobile.png');
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    background-size: auto $hero-height-mobile * 1.24;
+
     background-color: $hero-color;
     position: relative;
+
+    &\--index {
+        background-image: url('../img/hero-mobile.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-size: auto $hero-height-mobile--index * 1.24;
+    }
 
     &__top-links {
         height: 40px;
@@ -16,23 +20,54 @@
         text-align: center;
         position: absolute;
         width: 90%;
-        top: $hero-height-mobile * 0.28;
         left: 50%;
         transform: translateX(-50%);
 
-        @media(min-width: $tablet) { 
-            font-size: 3rem;
-            top: $hero-height-tablet-desktop * 0.23;
-        }
+    }
 
-        @media(min-width: $desktop) {
-            font-size: 3.5rem;
-        }
+    &__title\--index {
+        top: $hero-height-mobile--index * 0.28;
+    }
 
+    &__title\--catalog {
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     @media(min-width: $tablet) { 
-        background-image: url('../img/hero-desktop-tablet.png');
-        background-size: auto $hero-height-tablet-desktop * 1.19;
+
+        &\--index {
+            background-image: url('../img/hero-desktop-tablet.png');
+            background-size: auto $hero-height-tablet-desktop--index * 1.19;
+        }
+        
+        &\--catalog {
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 20px;
+                width: 100%;
+                top: 100%;
+                left: 0;
+                background: url('../img/wave.svg') center center repeat-x;
+                background-size: auto 20px;    
+                background-color: $hero-color;            
+            } 
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__title\--index { 
+            top: $hero-height-tablet-desktop--index * 0.23;
+        }
+    }
+
+    @media(min-width: $desktop) {
+        &__title { 
+            font-size: 3.5rem;
+        }
     }
 }
