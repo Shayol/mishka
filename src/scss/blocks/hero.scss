@@ -8,6 +8,7 @@
         background-repeat: no-repeat;
         background-position: 50% 0%;
         background-size: auto $hero-height-mobile--index * 1.24;
+        background-color: $hero-color--index;
     }
 
     &__top-links {
@@ -21,39 +22,38 @@
         position: absolute;
         width: 90%;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);        
 
     }
 
     &__title\--index {
         top: $hero-height-mobile--index * 0.28;
-    }
-
-    &__title\--catalog {
-        top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
     }
 
     @media(min-width: $tablet) { 
+        
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 20px;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            background: url('../img/wave.svg') center center repeat-x;
+            background-size: auto 100%;    
+            background-color: $hero-color;            
+        } 
 
         &\--index {
             background-image: url('../img/hero-desktop-tablet.png');
             background-size: auto $hero-height-tablet-desktop--index * 1.19;
-        }
-        
-        &\--catalog {
+
             &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                height: 20px;
-                width: 100%;
-                top: 100%;
-                left: 0;
-                background: url('../img/wave.svg') center center repeat-x;
-                background-size: auto 20px;    
-                background-color: $hero-color;            
-            } 
+                display: none;
+            }
         }
 
         &__title {
