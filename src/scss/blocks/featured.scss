@@ -78,10 +78,13 @@
 
     &__title {
         text-transform: uppercase;
-        text-align: center;
         color: $green-color;
         font-weight: bold;
         grid-area: title;
+
+        @media(min-width: $tablet) { 
+            text-align: center;
+        }
         
         @media(min-width: $desktop) { 
             grid-area: 1 / 1 ;
