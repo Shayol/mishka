@@ -11,22 +11,22 @@
         content: '';
         display: block;
         position: absolute;
-        height: 7px;
+        height: $small-wave-height-mobile;
         width: 100%;
         top: 100%;
         left: 0;
         background: url('../img/featured-wave.svg') center center repeat-x;
         // fill: #f1f1f1;
-        background-size: auto 7px;
+        background-size: auto $small-wave-height-mobile;
 
         @media(min-width: $tablet) { 
-            height: 17px;
-            background-size: auto 17px;
+            height: $small-wave-height-tablet;
+            background-size: auto $small-wave-height-tablet;
         }
 
         @media(min-width: $desktop) { 
-            height: 23px;
-            background-size: auto 23px;
+            height: $small-wave-height-desktop;
+            background-size: auto $small-wave-height-desktop;
         }
 
         
