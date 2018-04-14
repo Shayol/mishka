@@ -56,20 +56,16 @@
     }
 
     &__product-name {
-        font-size: 1.4rem;
-        font-weight: bold;
         margin-bottom: 8px;
         grid-area: name;
         z-index: 1;
 
         @media(min-width: $tablet) { 
-            font-size: 2.3em;
             margin-bottom: 0;
         }
 
         @media(min-width: $desktop) { 
             grid-area: 1 / 2 / span 1 / span 2;
-            font-size: 2.8em;
             align-self: end;
         }
 
