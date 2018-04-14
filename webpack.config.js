@@ -17,7 +17,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        exclude: /(index|catalog|form)\.html$/, //without this HtmlWebPackPlugin will not work with template file correctly
+        exclude: /^(index|catalog|form)\.html$/, //without this HtmlWebPackPlugin will not work with template file correctly
         use: [
           {
             loader: "html-loader",

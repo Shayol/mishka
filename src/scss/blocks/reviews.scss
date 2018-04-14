@@ -1,0 +1,117 @@
+.reviews {
+    padding-top: 30px;
+    padding-bottom: 44px;
+    position: relative;
+
+    &__title {
+        margin-bottom: 1.7em;
+    }
+
+    &__text {
+        line-height: 2em;
+        margin-bottom: 40px;
+    } 
+
+    &__author-name {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    &__author-email {
+        font-size: 1.2em;
+        margin-top: 0.8em;
+    }
+
+    &__arrows {
+        display: flex;
+        margin: 2.3em 0;
+    }
+
+    &__arrow {
+        border: 1px solid #ececec;
+        height: 52px;
+        flex-basis: 50%;
+    }
+
+    &__arrow\--left {
+        background: url('../img/arrow-left.png') 50% no-repeat;
+    }
+
+    &__arrow\--right {
+        background: url('../img/arrow-right.png') 50% no-repeat;
+        border-left: 0;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: $small-wave-height-mobile;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background: url('../img/featured-wave.svg') center center repeat-x;
+        background-size: auto $small-wave-height-mobile;        
+    }
+
+    @media(min-width: $tablet) { 
+
+        background: url('../img/reviews-background.png') no-repeat;
+        background-size: 350px 457px;
+        height: 525px;
+        padding-bottom: 68px;
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            width: 100%;
+            margin: 54px 0 50px 0;
+            order: 2;
+        }
+
+        &__author {
+            order: 3;
+        }
+
+        &__button {
+            order: 1;
+            width: 175px;
+        }
+
+        &__arrows {
+            order: 4;
+            margin: 0;
+            width: 137px;
+        }
+
+        &__arrow {
+            border: 0;
+        }
+
+        &::after {
+            height: $small-wave-height-tablet;
+            background-size: auto $small-wave-height-tablet;
+        }
+        
+    }
+
+    @media(min-width: $desktop) { 
+        padding-left: 12%;
+
+        &::after {
+            height: $small-wave-height-desktop;
+            background-size: auto $small-wave-height-desktop;
+        }
+        
+    }
+}

@@ -16,7 +16,6 @@
         top: 100%;
         left: 0;
         background: url('../img/featured-wave.svg') center center repeat-x;
-        // fill: #f1f1f1;
         background-size: auto $small-wave-height-mobile;
 
         @media(min-width: $tablet) { 
@@ -165,14 +164,5 @@
         @media(min-width: $tablet) { 
             font-size: 1.2em;
         }
-    }
-
-    &__order {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        text-transform: uppercase;
-        font-weight: bold;
-        border: 2px solid black;
-        text-align: center;
     }
 }
