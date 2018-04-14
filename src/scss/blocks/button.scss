@@ -5,4 +5,9 @@
     font-weight: bold;
     border: 2px solid black;
     text-align: center;
+
+    @media(min-width: $tablet) { 
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
 }

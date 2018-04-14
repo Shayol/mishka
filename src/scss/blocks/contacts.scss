@@ -1,0 +1,121 @@
+.contacts {
+
+    padding-top: 44px + $small-wave-height-mobile;
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: 42px;
+    }
+
+    &__email {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 42px;
+        flex-wrap: wrap;
+    }
+
+    &__email-field {
+        margin-right: 32px;
+    }
+
+    &__email-address {
+        border-bottom: 1px solid $green-color;
+    }
+
+    &__address-field {
+        margin-right: 26px;
+    }
+
+    &__address {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 42px;
+        flex-wrap: wrap;
+        line-height: 1.8em;
+    }
+
+    &__button {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__map-iframe {
+        height: 457px;
+        width: 100%;
+    }
+
+    @media(min-width: $tablet) { 
+
+        &__data {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__title {
+            font-size: 2.3em;
+            flex-basis: 70%;
+        }
+
+        &__flag-icon {
+            width: 47px;
+            height: 81px;
+            background: url('../img/contacts-flag-icon.png') no-repeat;
+        }
+
+        &__email, &__address {
+            flex-basis: 50%;
+        }
+
+        &__button {
+            margin-top: 55px;
+            margin-bottom: 55px;
+            width: initial;
+            display: inline-block;
+            margin: 55px auto 55px auto;
+        }
+    }
+
+    @media(min-width: $desktop) { 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 633px + $small-wave-height-desktop;
+        padding-left: 12%;
+        padding-top: 71px + $small-wave-height-desktop;
+        padding-bottom: 105px;
+        background: url('../img/contacts-flag-icon.png') top 165px left 5% no-repeat;
+
+        &__flag-icon {
+            display: none;
+        }
+
+        &__title {
+            font-size: 2.8em;
+        }
+
+        &__data {
+            height: initial;
+            display: initial;
+            width: initial;
+            margin: 0;
+        }
+
+        &__address {
+            margin-bottom: 0;
+        }
+
+        &__map {
+            order: 1;
+            flex-basis: 50%;
+        }
+
+        &__button {
+            width: initial;
+            height: initial;
+            margin: 84px 0 0 0;
+            align-self: flex-start;
+        }
+    }
+}
