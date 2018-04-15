@@ -1,0 +1,18 @@
+.developed-by {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__text {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    @media(min-width: $tablet) { 
+        justify-content: space-between;
+
+        &__text {
+            margin-right: 30px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media(min-width: $tablet) { 
+        &__facebook {
+            margin: 0 40px;
+        }
+    }
+}

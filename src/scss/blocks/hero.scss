@@ -1,6 +1,6 @@
 .hero {
 
-    background-color: $hero-color;
+    background-color: $grey-color;
     position: relative;
 
     &\--index {
@@ -8,7 +8,7 @@
         background-repeat: no-repeat;
         background-position: 50% 0%;
         background-size: auto $hero-height-mobile--index * 1.24;
-        background-color: $hero-color--index;
+        background-color: $grey-color--index;
     }
 
     &__top-links {
@@ -44,7 +44,7 @@
             left: 0;
             background: url('../img/wave.svg') center center repeat-x;
             background-size: auto 100%;    
-            background-color: $hero-color;            
+            background-color: $grey-color;            
         } 
 
         &\--index {

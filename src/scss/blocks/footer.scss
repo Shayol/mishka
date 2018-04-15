@@ -1,0 +1,51 @@
+.footer {
+    background-color: $grey-color;
+
+     &__logo {
+         display: none;
+     }
+
+     &__content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         height: 160px;
+     }
+
+     &__social {
+         width: 70%;
+         height: 50%;
+     }
+
+     &__developed-by {
+         height: 50%;
+         width: 88%;
+         border-top: 1px solid #e5e5e5;
+     }
+
+     @media(min-width: $tablet) { 
+
+         &__content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 145px;
+         }
+         
+        &__logo {
+            display: block;
+        }
+
+        &__social {
+            width: initial;
+            width: initial;
+        }
+
+        &__developed-by {
+            border-top: none;
+            width: initial;
+        }
+
+
+     }
+}
