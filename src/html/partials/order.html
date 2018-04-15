@@ -6,17 +6,26 @@
             </div>
         </div>
     </div>
-    <div class="order__type type">
+    <div class="order__type">
         <div class="page__container">
-            <div class="page__item type__content order__group">
+            <div class="page__item order__group">
                 <div class="order__header">тип</div>
-                <div class="type__inner">
-                    <label class="order__label">
-                        <input type="radio" name="type" value="interior" class="type__item" checked> Аксессуар для интерьера
-                    </label>
-                    <label class="order__label">
-                        <input type="radio" value="toys" name="type" class="type__item"> Детская игрушка
-                    </label>
+                <div class="order__inner order__inner--type">
+                    <div class="order__field order__field--type-first">
+                        <input type="radio" name="type" value="interior" class="order__radio" checked>
+                        <div class="order__decorate-form-element"></div>
+                        <label class="order__label">
+                            Аксессуар для интерьера
+                        </label>
+                    </div>
+
+                    <div class="order__field">
+                        <input type="radio" value="toys" name="type" class="order__radio">
+                        <div class="order__decorate-form-element"></div>
+                        <label class="order__label">
+                            Детская игрушка
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
