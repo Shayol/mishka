@@ -6,6 +6,16 @@
     border: 2px solid black;
     text-align: center;
 
+    &:hover {
+        background-color: #444444;
+        color:white;
+    }
+
+    &:active {
+        background-color: #444444;
+        color: #8d8d8d;
+    }
+
     @media(min-width: $tablet) { 
         padding-left: 2.5em;
         padding-right: 2.5em;
