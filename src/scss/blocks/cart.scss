@@ -17,7 +17,7 @@
 
     @media(min-width: $tablet) {
         &:hover &__content {
-            color: $hover-color;
+            opacity: $hover-opacity;
         }
     
         &:hover &__icon {
@@ -30,7 +30,7 @@
         }
 
         &:active &__content {
-            color: $down-color;
+            opacity: $down-opacity;
         }
 
     }

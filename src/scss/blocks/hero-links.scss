@@ -13,11 +13,11 @@
         }
 
         &__text:hover {
-            color: $hover-color;
+            opacity: $hover-opacity;
         }
 
         &__text:active {
-            color: $down-color;
+            opacity: $down-opacity;
         }
 
         &__item--new-arrivals, &__item--sale {

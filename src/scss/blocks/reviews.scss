@@ -31,6 +31,14 @@
         border: 1px solid #ececec;
         height: 52px;
         flex-basis: 50%;
+
+        &:hover {
+            opacity: $hover-opacity;
+        }
+
+        &:active {
+            opacity: $down-opacity;
+        }
     }
 
     &__arrow\--left {

@@ -11,11 +11,11 @@
     }
 
     &__text:hover {
-        color: $hover-color;
+        opacity: $hover-opacity;
     }
 
     &__text:active {
-        color: $down-color;
+        opacity: $down-opacity;
     }
 
     &\--catalog {
