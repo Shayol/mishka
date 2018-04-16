@@ -114,17 +114,17 @@
         <div class="page__container">
             <div class="page__item order__group">
                 <div class="order__header">тел</div>
-                <div class="order__inner">
-                    <input type="tel" placeholder="+7 ХХХ ХХ ХХ*" name="phone" class="order__input order__input--tel" required>
+                <div class="order__inner order__inner--phone">
+                    <input type="tel" placeholder="+7 ХХХ ХХ ХХ*" name="phone" class="order__input order__input--phone" required>
                 </div>
             </div>
         </div>
     </div>
-    <div class="order__email email">
+    <div class="order__email">
         <div class="page__container">
-            <div class="page__item email__content order__group">
+            <div class="page__item order__group">
                 <div class="order__header">e-mail</div>
-                <div class="order__inner">
+                <div class="order__inner order__inner--email">
                     <input type="email" placeholder="Ваш Email*" name="email" class="order__input order__input--email" required>
                 </div>
             </div>
@@ -135,15 +135,14 @@
             <div class="page__item order__group">
                 <div class="order__header">доп</div>
                 <div class="order__inner">
-                    <textarea class="order__textarea" name="notes" placeholder="Опишите все ваши 
-                    пожелания к заказу" cols="30" rows="10"></textarea>
+                    <textarea class="order__textarea" name="notes" placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="10"></textarea>
                 </div>
             </div>
         </div>
     </div>
     <div class="page__container">
         <div class="page__item">
-            <div class="form__required-fields">*Поля обязательны для заполнения</div>
+            <div class="order__required-fields">*Поля обязательны для заполнения</div>
         </div>
     </div>
     <div class="page__container">

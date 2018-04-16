@@ -32,16 +32,34 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     &__inner\--type {
         height: 160px;
+        justify-content: center;
     }
 
     &__inner\--color {
         height: 400px;
         justify-content: space-evenly;
+    }
+
+    &__inner\--name {
+        height: 318px;
+        justify-content: space-between;
+        padding: 32px 0 34px 0;
+    }
+
+    &__inner\--email {
+        height: 95px;
+        justify-content: flex-start;
+        padding: 9px 0 12px 0;
+    }
+
+    &__inner\--phone {
+        height: 95px;
+        justify-content: flex-start;
+        padding: 9px 0 34px 0;
     }
 
     &__field {
@@ -75,14 +93,6 @@
         height: 40px;
         width: 40px;
         border: 2px solid black;
-
-        // &:hover {
-        //     border-color: $green-color;
-        // }
-
-        // &:active {
-        //     border-color: $dark-grey-color;
-        // }
     }
 
     &__decorate-form-element\--radio {
@@ -132,5 +142,64 @@
 
     &__label {
         font-weight: bold;
+    }
+
+    &__input {
+        height: 52px;
+        border: 0;
+        border-bottom: 2px solid black;
+        outline: none;
+        font-size: 1rem;
+
+        &:hover, &:active {
+            border-color: $green-color;
+        }
+    }
+
+    &__input::placeholder {
+        font-size: 1rem;
+        color: $dark-grey-color;
+        opacity: 1;
+    }
+
+    &__input\--phone {
+        background: url('../img/phone.png') top 50% right 8px no-repeat;
+
+        &:hover, &:active {
+            background-image: url('../img/phone-active.png')
+        }
+    }
+
+    &__input\--email {
+        background: url('../img/email.png') top 50% right 8px no-repeat;
+    }
+
+    &__textarea {
+        padding: 1rem;
+        height: 140px;
+        margin: 24px 0 18px 0;
+        outline: none;
+        resize: none;
+
+        &:hover, &:active {
+            border-color: $green-color;
+        }
+    }
+
+    &__textarea::placeholder {
+        font-size: 1rem;
+        color: $dark-grey-color;
+        opacity: 1;
+    }
+
+    &__required-fields {
+        font-size: 0.9em;
+    }
+
+    &__submit {
+        background-color: white;
+        margin: 30px 0 50px 0;
+        width: 100%; 
+        font-size: 1rem;
     }
 }
