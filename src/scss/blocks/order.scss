@@ -39,13 +39,25 @@
         height: 160px;
     }
 
+    &__inner\--color {
+        height: 400px;
+        justify-content: space-evenly;
+    }
+
     &__field {
         display: flex;
+    }
+
+    &__field\--row {
         align-items: center;
         position: relative;
     }
 
-    &__radio {
+    &__field\--column {
+        flex-direction: column;
+    }
+
+    &__radio, &__checkbox {
         height: 40px;
         width: 40px;
         opacity: 0;
@@ -63,6 +75,17 @@
         height: 40px;
         width: 40px;
         border: 2px solid black;
+
+        // &:hover {
+        //     border-color: $green-color;
+        // }
+
+        // &:active {
+        //     border-color: $dark-grey-color;
+        // }
+    }
+
+    &__decorate-form-element\--radio {
         border-radius: 50%;
     }
 
@@ -75,6 +98,35 @@
         top: 10px;
         left: 10px;
         background-color: $green-color;
+        z-index: 2;
+    }
+
+    &__radio:hover + &__decorate-form-element {
+        border-color: $green-color;
+    }
+
+    &__checkbox:hover + &__decorate-form-element {
+        border-color: $green-color;
+    }
+
+    &__radio:active + &__decorate-form-element {
+        border-color: $dark-grey-color;
+    }
+
+    &__checkbox:active + &__decorate-form-element {
+        border-color: $dark-grey-color;
+    }
+
+    &__checkbox:checked + &__decorate-form-element::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 10px;
+        top: 50%;
+        left: 50%;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        transform: translate(-50%, -50%) rotate(45deg);
         z-index: 2;
     }
 

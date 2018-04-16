@@ -42,8 +42,9 @@
             width: 100%;
             top: 100%;
             left: 0;
-            background: url('../img/wave.svg') center center repeat-x;
+            background: url('../img/wave.svg') repeat-x;
             background-size: auto 100%;    
+            background-position: bottom -4px left -8px;
             background-color: $grey-color;            
         } 
 
@@ -66,8 +67,13 @@
     }
 
     @media(min-width: $desktop) {
+
         &__title { 
             font-size: 3.5rem;
+        }
+
+        &::after {
+            height: 30px;
         }
     }
 }
