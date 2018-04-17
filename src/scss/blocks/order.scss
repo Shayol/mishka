@@ -32,6 +32,7 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     &__inner\--type {
@@ -52,13 +53,11 @@
 
     &__inner\--email {
         height: 95px;
-        justify-content: flex-start;
         padding: 9px 0 12px 0;
     }
 
     &__inner\--phone {
         height: 95px;
-        justify-content: flex-start;
         padding: 9px 0 34px 0;
     }
 
@@ -66,12 +65,12 @@
         display: flex;
     }
 
-    &__field\--row {
+    &__field\--type, &__field\--color {
         align-items: center;
         position: relative;
     }
 
-    &__field\--column {
+    &__field\--name {
         flex-direction: column;
     }
 
@@ -105,8 +104,9 @@
         height: 16px;
         width: 16px;
         border-radius: 50%;
-        top: 10px;
-        left: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
         background-color: $green-color;
         z-index: 2;
     }
@@ -134,9 +134,9 @@
         width: 10px;
         top: 50%;
         left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
         border-right: 2px solid black;
         border-bottom: 2px solid black;
-        transform: translate(-50%, -50%) rotate(45deg);
         z-index: 2;
     }
 
@@ -201,5 +201,153 @@
         margin: 30px 0 50px 0;
         width: 100%; 
         font-size: 1rem;
+    }
+
+    @media(min-width: $tablet) { 
+        &__intro {
+            padding: 88px 0 62px 0;
+            font-size: 1.1em;
+            line-height: 1.4em;
+        }
+
+        &__group {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__group\--phone, &__group\--email, &__group--notes {
+            align-items: baseline;
+        }
+
+        &__header {
+            flex-basis: 25%;
+            padding-top: 20px;
+
+            &::after {
+                display: none;
+            }
+        }
+
+
+        &__color, &__phone, &__email {
+            background-color: $grey-color;
+        }
+
+        &__color {
+            padding: 50px 0 50px;
+        }
+
+        &__name {
+            padding: 50px 0 50px;
+        }
+
+        &__phone {
+            padding-top: 50px;
+        }
+
+        &__email {
+            padding-bottom: 50px;
+        }
+
+        &__notes {
+            padding: 50px 0 50px;
+        }
+
+        &__radio, &__checkbox {
+            height: 52px;
+            width: 52px;
+            margin-right: 28px;
+        }
+
+        &__textarea {
+            margin: 0;                        
+        }
+
+        &__bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        &__submit {
+            width: initial;
+            order: -1;
+            margin-top: 0;
+        }
+    
+        &__decorate-form-element {
+            height: 52px;
+            width: 52px;
+        }
+
+        &__radio:checked + &__decorate-form-element::after {
+            height: 22px;
+            width: 22px;
+        }
+
+        &__checkbox:checked + &__decorate-form-element::after {
+            height: 30px;
+            width: 15px;
+        }
+
+
+        &__inner {
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        &__inner\--type {
+            height: 178px;
+            padding-bottom: 50px;
+        }
+    
+        &__inner\--color {
+            height: 204px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    
+        &__inner\--name {
+            height: 204px;
+            padding: 0;
+        }
+
+        &__inner\--phone {
+            height: 64px;
+            padding: 0;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    
+        &__inner\--email {
+            height: 64px;
+            padding: 0;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        &__field\--color:nth-child(2), &__field\--color:nth-child(5) {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        &__field\--name {
+            flex-direction: row;
+            align-items: center;
+            justify-content: stretch;
+        }
+
+        &__label\--name {
+            margin-right: 25px;
+        }
+        
+        &__input {
+            flex-grow: 1;
+        }
+
+    }
+
+    @media(min-width: $desktop) { 
+
     }
 }
