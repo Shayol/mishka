@@ -178,6 +178,7 @@
         padding: 1rem;
         height: 140px;
         margin: 24px 0 18px 0;
+        border: 2px solid black;
         outline: none;
         resize: none;
 
@@ -234,11 +235,11 @@
         }
 
         &__color {
-            padding: 50px 0 50px;
+            padding: 50px 0 50px 0;
         }
 
         &__name {
-            padding: 50px 0 50px;
+            padding: 50px 0 50px 0;
         }
 
         &__phone {
@@ -250,7 +251,7 @@
         }
 
         &__notes {
-            padding: 50px 0 50px;
+            padding: 50px 0 50px 0;
         }
 
         &__radio, &__checkbox {
@@ -348,6 +349,51 @@
     }
 
     @media(min-width: $desktop) { 
+
+        &__intro {
+            padding: 140px 0 12px 0;
+            margin: 0 17% 0 17%;
+        }
+
+        &__header {
+            flex-basis: 17%;
+            padding-left: 6%;
+        }
+
+        &__inner {
+            padding-right: 17%;
+
+            &\--color {
+                padding-right: 0;
+            }
+        }
+
+        &__type {
+            padding-top: 50px;
+        }
+
+        &__inner\--color { 
+            height: 128px;
+            flex-basis: 83%;
+            flex-direction: row;
+            justify-content: center;
+            align-content: space-between;
+        }
+
+        &__field\--color {
+            flex-basis: 33.32%;
+        }
+
+        &__field\--color:nth-child(2), &__field\--color:nth-child(5) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &__bottom-section {
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
 
     }
 }
