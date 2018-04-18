@@ -69,6 +69,7 @@
 
         height: 455px;
         flex-wrap: wrap;
+        justify-content: space-between;
         padding-right: 5.5%;
 
         &__container {
@@ -78,18 +79,24 @@
         }
 
         &__header {
-            margin: 4.5% 0 4% 0;
-            width: initial;
+            margin: 4.5% 0 0 0;
+            width: 28.5%;
+            flex-direction: column;
+            align-items: flex-start;
+        }    
+
+        &__icon {
+            margin-bottom: 8%;
         }
 
-        &_description {
-            margin: 0 0 4.5% 0;
-            width: initial;
+        &__description {
+            margin: 0;
+            width: 28.5%;
         }
 
         &__button {
-            // width: 30%;
-            flex-shrink: 1;
+            width: 28.5%;
+            // flex-shrink: 1;
             margin: 0 0 5.5% 0;
         }
     }
