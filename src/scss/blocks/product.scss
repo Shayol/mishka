@@ -1,5 +1,10 @@
-// .product {
-//     &__img {
-//         background-size: 100% auto;
-//     }
-// }
+.product {
+
+    border: 1px solid $grey-border-color;
+    padding: 10%;
+
+    &__picture {
+        width: 100%;
+        height: auto;
+    }
+}
