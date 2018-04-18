@@ -1,14 +1,96 @@
-.production-video__container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
+.production-video {
 
-.production-video__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+    border: 1px solid $grey-border-color;
+    margin-bottom: 58px;
+
+    &__container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+    }
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 74%;
+        margin: 12% auto 10% auto;
+        font-weight: bold;
+    }
+    &__icon {
+        margin-right: 10%;
+    }
+    &__description {
+        font-size: 0.8em;
+        line-height: 2em;
+        width: 74%;
+        margin: 13% auto 12% auto;
+    }
+    &__button {
+        width: 74%;
+        margin: 0 auto 13% auto;
+    }
+    @media(min-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+
+        &__container {
+            order: -1;
+            padding-top: 455px;
+        }
+        &__header {
+            display: flex;
+            font-size: 1.1em;
+            justify-content: flex-start;
+            align-items: center;
+            width: 74%;
+            margin: 6% auto 0 auto;
+        }
+        &__description {
+            font-size: 0.9em;
+            line-height: 2em;
+            width: 88%;
+            margin: 6.5% auto 6% auto;
+        }
+        &__button {
+            width: 88%;
+            margin: 0 auto 6.5% auto;
+        }
+    }
+
+    @media(min-width: $desktop) {
+
+        height: 455px;
+        flex-wrap: wrap;
+        padding-right: 5.5%;
+
+        &__container {
+            width: 65%;
+            flex-basis: 100%;
+            margin-right: 7.5%;
+        }
+
+        &__header {
+            margin: 4.5% 0 4% 0;
+            width: initial;
+        }
+
+        &_description {
+            margin: 0 0 4.5% 0;
+            width: initial;
+        }
+
+        &__button {
+            // width: 30%;
+            flex-shrink: 1;
+            margin: 0 0 5.5% 0;
+        }
+    }
 }
