@@ -20,7 +20,7 @@ module.exports = {
         exclude: /(index|catalog|form)\.html$/, //without this HtmlWebPackPlugin will not work with template file correctly
         use: [
           {
-            loader: "html-loader",
+            loader: "raw-loader",
             options: { minimize: true }
           }
         ]

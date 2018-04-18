@@ -40,10 +40,14 @@
 
     @media(min-width: $desktop) { 
         padding-top: 70px + $small-wave-height-desktop;
-        margin-left: 12%;
+        margin-left: 17%;
 
         &__content {
             align-content: flex-start;
+        }
+
+        &__item {
+            width: 33.33%;
         }
     }
 }
