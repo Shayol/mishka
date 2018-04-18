@@ -71,6 +71,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding-right: 5.5%;
+        margin-bottom: 105px;
 
         &__container {
             width: 65%;
@@ -96,7 +97,6 @@
 
         &__button {
             width: 28.5%;
-            // flex-shrink: 1;
             margin: 0 0 5.5% 0;
         }
     }
