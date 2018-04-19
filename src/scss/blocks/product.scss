@@ -1,10 +1,96 @@
 .product {
 
     border: 1px solid $grey-border-color;
-    padding: 10%;
+
 
     &__picture {
         width: 100%;
         height: auto;
+        margin-bottom: -5px; //space at the bottom
+    }
+
+    &__description {
+        padding: 30px 28px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__order {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $grey-border-color;
+        padding-top: 28px;
+    }
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__info {
+        font-size: 0.8em;
+        padding-bottom: 28px;
+        padding-top: 17px;
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+
+    @media(min-width: $tablet) { 
+
+        display: flex;
+
+        &__img {
+            flex-basis: 50%;
+        }
+
+        &__name {
+            font-size: 1.3em;
+        }
+
+        &__info {
+            font-size: 1em;
+        }
+
+        &__description {
+            justify-content: initial;
+            flex-basis: 50%;
+        }
+
+        &__order {
+            margin-top: auto;
+        }
+    }
+
+    @media(min-width: $desktop) { 
+        flex-direction: column;
+        position: relative;
+
+        &:hover &__description {
+            box-shadow: 1px 6px 9px $grey-border-color,
+                        -1px 0 9px $grey-border-color;
+        }
+
+        &:active &__description {
+            box-shadow: 0.5px 4px 5px $grey-border-color,
+                        -0.5px 0 5px $grey-border-color;
+        }
+
+        &__description {
+            height: 200px;
+        }
+
+        &__img {
+            flex-basis: initial;
+        }
+
+        &__info {
+            padding-bottom: 0;
+            padding-top: 15px;
+        }
+
+        &__order {
+            height: 45px;
+        }
     }
 }
