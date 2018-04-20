@@ -1,6 +1,10 @@
 .about-us {
-    padding-top: 34px + $small-wave-height-mobile; 
-    padding-bottom: 30px;
+
+        &__inner {
+            padding-top: 34px + $small-wave-height-mobile; 
+            padding-bottom: 30px;
+        }
+
 
     &__title {
         padding-bottom: 0.7em;
@@ -39,8 +43,13 @@
     }
 
     @media(min-width: $desktop) { 
+
         padding-top: 70px + $small-wave-height-desktop;
-        margin-left: 17%;
+
+        &__inner {
+            margin-left: 17%;
+        }
+        
 
         &__content {
             align-content: flex-start;

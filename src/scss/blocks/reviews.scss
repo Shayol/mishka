@@ -114,11 +114,21 @@
 
     @media(min-width: $desktop) { 
         padding-left: 12%;
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
 
         &::after {
             height: $small-wave-height-desktop;
             background-size: auto $small-wave-height-desktop;
         }
         
+    }
+
+
+    @media(min-width: 1185px) {
+        &__content {
+            width: 100%;
+        }
     }
 }

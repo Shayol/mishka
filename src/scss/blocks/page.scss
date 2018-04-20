@@ -9,7 +9,7 @@
         min-width: 260px;
 
         @media(min-width: $tablet) {
-            width: 87%;
+            width: $page__item-width-tablet;
         }
     }
 

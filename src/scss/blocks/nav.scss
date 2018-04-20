@@ -3,18 +3,6 @@
     background-color: $grey-color--index;
     position: relative;
 
-    // &::after {
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     height: 34px;
-    //     width: 100%;
-    //     bottom: 0;
-    //     left: 0;
-    //     background: url('../img/wave.png') center center repeat-x, $grey-color;
-    //     z-index: 0;
-    // }
-
     &__inner {
         display: flex;
         flex-direction: column;
@@ -22,12 +10,10 @@
         @media(min-width: $tablet) {
             flex-direction: row;
             align-items: start;
-            width: 81%;
+            max-width: 1050px;
+            width: $page__item-width-tablet;
             margin-left: auto;
             margin-right: auto; 
-            @media(min-width: $desktop) { 
-                width: 100%;
-            }
         }
     }
 
