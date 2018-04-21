@@ -7,49 +7,6 @@
         margin-bottom: 1.7em;
     }
 
-    &__text {
-        line-height: 2em;
-        margin-bottom: 40px;
-    } 
-
-    &__author-name {
-        font-weight: bold;
-        font-size: 1.2em;
-    }
-
-    &__author-email {
-        font-size: 1.2em;
-        margin-top: 0.8em;
-    }
-
-    &__arrows {
-        display: flex;
-        margin: 2.3em 0;
-    }
-
-    &__arrow {
-        border: 1px solid #ececec;
-        height: 52px;
-        flex-basis: 50%;
-
-        &:hover {
-            opacity: $hover-opacity;
-        }
-
-        &:active {
-            opacity: $down-opacity;
-        }
-    }
-
-    &__arrow\--left {
-        background: url('../img/arrow-left.png') 50% no-repeat;
-    }
-
-    &__arrow\--right {
-        background: url('../img/arrow-right.png') 50% no-repeat;
-        border-left: 0;
-    }
-
     &::after {
         content: '';
         display: block;
@@ -77,32 +34,12 @@
             align-content: center;
         }
 
-        &__title {
-            margin-bottom: 0;
-        }
-
-        &__text {
-            width: 100%;
-            margin: 54px 0 50px 0;
-            order: 2;
-        }
-
-        &__author {
-            order: 3;
-        }
-
-        &__button {
+        &__slider {
             order: 1;
         }
 
-        &__arrows {
-            order: 4;
-            margin: 0;
-            width: 137px;
-        }
-
-        &__arrow {
-            border: 0;
+        &__title {
+            margin-bottom: 0;
         }
 
         &::after {
@@ -117,12 +54,13 @@
         max-width: 1050px;
         margin-left: auto;
         margin-right: auto;
+        padding-bottom: 165px;
+        margin-top: 60px;
 
         &::after {
             height: $small-wave-height-desktop;
             background-size: auto $small-wave-height-desktop;
         }
-        
     }
 
 

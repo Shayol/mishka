@@ -1,0 +1,73 @@
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    &__slide {
+        display: flex;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__text {
+        line-height: 1.8em;
+        margin-bottom: 40px;
+    } 
+
+    &__author-name {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    &__author-email {
+        font-size: 1.1em;
+        margin-top: 0.7em;
+    }
+
+    &__arrows {
+        display: flex;
+        margin: 2.3em 0;
+    }
+
+    &__arrow {
+        border: 1px solid #ececec;
+        height: 52px;
+        flex-basis: 50%;
+
+        &:hover {
+            opacity: $hover-opacity;
+        }
+
+        &:active {
+            opacity: $down-opacity;
+        }
+    }
+
+    &__arrow\--left {
+        background: url('../img/arrow-left.png') 50% no-repeat;
+    }
+
+    &__arrow\--right {
+        background: url('../img/arrow-right.png') 50% no-repeat;
+        border-left: 0;
+    }
+
+    @media(min-width: $tablet) { 
+        &__text {
+            width: 100%;
+            margin: 54px 0 50px 0;
+        }
+
+        &__arrows {
+            margin: 0;
+            margin-left: auto;
+            width: 137px;
+        }
+
+        &__arrow {
+            border: 0;
+        }
+    }
+}
