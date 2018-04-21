@@ -1,13 +1,10 @@
 .slider {
-    display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    display: flex;
 
     &__slide {
-        display: flex;
         flex-shrink: 0;
-        flex-wrap: wrap;
-        justify-content: space-between;
         width: 100%;
     }
 
@@ -55,6 +52,14 @@
     }
 
     @media(min-width: $tablet) { 
+
+        &__slide {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+
         &__text {
             width: 100%;
             margin: 54px 0 50px 0;
