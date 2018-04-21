@@ -71,9 +71,17 @@
                         -1px 0 9px $grey-border-color;
         }
 
+        &:hover &__name {
+            opacity: $hover-opacity;
+        }
+
         &:active &__description {
             box-shadow: 0.5px 4px 5px $grey-border-color,
                         -0.5px 0 5px $grey-border-color;
+        }
+
+        &:active &__name {
+            opacity: $down-opacity;
         }
 
         &__description {
