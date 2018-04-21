@@ -1,11 +1,37 @@
+#slide-1:target ~ .slider {
+    transform: translateX(0%);
+}
+#slide-2:target ~ .slider {
+    transform: translateX(-100%);
+}
+#slide-3:target ~ .slider {
+    transform: translateX(-200%);
+}
+#slide-4:target ~ .slider {
+    transform: translateX(-300%);
+}
+
+
 .slider {
     overflow-x: hidden;
-    scroll-behavior: smooth;
-    display: flex;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+    // display: flex;
 
     &__slide {
         flex-shrink: 0;
         width: 100%;
+        display: inline-block;
+        white-space: initial;
+    }
+
+
+
+    &__anchor {
+        position: fixed;
     }
 
     &__text {
@@ -54,7 +80,7 @@
     @media(min-width: $tablet) { 
 
         &__slide {
-            display: flex;
+            // display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
