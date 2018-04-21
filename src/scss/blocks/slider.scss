@@ -13,19 +13,17 @@
 
 
 .slider {
-    overflow-x: hidden;
-    vertical-align: top;
+    vertical-align: bottom;
     white-space: nowrap;
-    height: 100%;
-    width: 100%;
-    transition: 0.8s;
-    // display: flex;
+    transition: all 0.9s ease-in;
+    font-size: 0;// to get rid of space between inline-block items 
 
     &__slide {
         flex-shrink: 0;
         width: 100%;
         display: inline-block;
         white-space: initial;
+        font-size: 1rem;
     }
 
 
@@ -77,15 +75,19 @@
         border-left: 0;
     }
 
+
     @media(min-width: $tablet) { 
 
         &__slide {
             // display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            display: inline-block;
         }
     
-
+        &__author {
+            float: left;
+        }
         &__text {
             width: 100%;
             margin: 54px 0 50px 0;

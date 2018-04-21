@@ -2,11 +2,9 @@
     padding-top: 30px;
     padding-bottom: 44px;
     position: relative;
-
     &__title {
         margin-bottom: 1.7em;
     }
-
     &::after {
         content: '';
         display: block;
@@ -16,54 +14,48 @@
         top: 100%;
         left: 0;
         background: url('../img/featured-wave.svg') center center repeat-x;
-        background-size: auto $small-wave-height-mobile;        
+        background-size: auto $small-wave-height-mobile;
     }
-
-    @media(min-width: $tablet) { 
-
+    &__content {
+        overflow: hidden; // this hides slides overflowing from slider
+    }
+    &__slider {
+        width: 100%;
+        height: 100%;
+    }
+    @media(min-width: $tablet) {
         background: url('../img/reviews-background.png') no-repeat;
         background-size: 350px 457px;
         height: 525px;
         padding-bottom: 68px;
-
         &__content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
-            align-content: center;
+            align-items: flex-end;
         }
-
         &__slider {
             order: 1;
         }
-
         &__title {
             margin-bottom: 0;
         }
-
         &::after {
             height: $small-wave-height-tablet;
             background-size: auto $small-wave-height-tablet;
         }
-        
     }
-
-    @media(min-width: $desktop) { 
+    @media(min-width: $desktop) {
         padding-left: 12%;
         max-width: 1050px;
         margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 165px;
+        margin-right: auto; // padding-bottom: 60px;
         margin-top: 60px;
-
         &::after {
             height: $small-wave-height-desktop;
             background-size: auto $small-wave-height-desktop;
         }
     }
-
-
     @media(min-width: 1185px) {
         &__content {
             width: 100%;
