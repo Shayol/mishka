@@ -1,6 +1,6 @@
 .footer {
     background-color: $grey-color;
-    &__logo {
+    &__logo-link {
         display: none;
     }
     &__content {
@@ -21,20 +21,30 @@
     @media(min-width: $tablet) {
         &__content {
             flex-direction: row;
-            justify-content: space-between;
+            // justify-content: stretch;
             align-items: center;
-            height: 145px;
+            height: 143px;
+        }
+        &__logo-link {
+            display: block;
+            flex-basis: 33.32%;
         }
         &__logo {
-            display: block;
+            fill: #2b2e34;
+            &:hover {
+                fill: $green-color-2;
+            }
+            &:active {
+                fill: $green-color-2;
+                opacity: $down-opacity;
+            }
         }
         &__social {
-            width: initial;
-            width: initial;
+            flex-basis: 33.32%;
         }
         &__developed-by {
             border-top: none;
-            width: initial;
+            flex-basis: 33.32%;
         }
     }
 }

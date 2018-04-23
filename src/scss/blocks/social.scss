@@ -1,10 +1,25 @@
+
 .social {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
-    @media(min-width: $tablet) { 
-        &__facebook {
+
+    &__icon {
+        fill: #221f1f;
+
+        &:hover {
+            fill: $green-color-2;
+        }
+
+        &:active {
+            fill: $green-color-2;
+            opacity: $down-opacity;
+        }
+    }
+
+    @media(min-width: $tablet) {
+        &__link--facebook{
             margin: 0 40px;
         }
     }

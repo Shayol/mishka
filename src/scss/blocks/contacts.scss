@@ -23,6 +23,15 @@
 
     &__email-address {
         border-bottom: 1px solid $green-color;
+        padding-bottom: 3px;
+        &:hover {
+            color: $green-color;
+        }
+
+        &:active {
+            color: $green-color;
+            opacity: 0.5;
+        }
     }
 
     &__address-field {

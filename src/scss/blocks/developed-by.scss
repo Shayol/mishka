@@ -8,8 +8,27 @@
         font-size: 1.1em;
     }
 
+    &__link {
+        display: block;
+    }
+
+    &__icon {
+        fill: $green-color;
+        stroke: $green-color;
+        &:hover {
+            fill: $green-color-2;
+            stroke: $green-color-2;
+        }
+
+        &:active {
+            fill: $green-color-2;
+            stroke: $green-color-2;
+            opacity: $down-opacity;
+        }
+    }
+
     @media(min-width: $tablet) { 
-        justify-content: space-between;
+        justify-content: flex-end;
 
         &__text {
             margin-right: 30px;
