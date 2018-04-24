@@ -1,62 +1,48 @@
 .top-menu {
- 
-         display: flex;
-         justify-content: flex-end;
-         align-items: center;
- 
-         @media(min-width: $tablet) {
-            justify-content: stretch;
-         }
-
-
-     &__link {
-         display: none;
-
-         @media(min-width: $desktop) {
-            height: 100%;
-            width: 21%;
-            display: flex;
-         }
-     }
- 
-     &__menu {
-         width: 1em;
- 
-         @media(min-width: $tablet) {
-             display: none;
-         }
-     }
- 
-     &__search {
-         flex-basis: $top-menu-height-mobile;
-         height: 100%;
-
-         @media(min-width: $tablet) { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__link {
+        display: none;
+    }
+    &__menu {
+        width: 1em;
+        @media(min-width: $tablet) {
+            display: none;
+        }
+    }
+    &__search {
+        flex-basis: $top-menu-height-mobile;
+        height: 100%;
+        @media(min-width: $tablet) {
             flex-basis: $top-menu-height-tablet-desktop;
-         }
-     }
- 
-     &__logo {
- 
-         margin-right: 42%;
- 
-         @media(min-width: $tablet) {
-             flex-basis: 45%;
-             margin-right: 0;
-         }
-
-         @media(min-width: $desktop) {
-             flex-basis: 23%;
-         }
-     }
- 
-     &__cart {
- 
-         display: none; 
- 
-         @media(min-width: $tablet) {
-             flex-grow: 1;
-             display: block;
-         }        
-     }
- }
+        }
+    }
+    &__logo {
+        margin-right: 42%;
+        @media(min-width: $tablet) {
+            flex-basis: 45%;
+            margin-right: 0;
+        }
+        @media(min-width: $desktop) {
+            flex-basis: 20%;
+        }
+    }
+    &__cart {
+        display: none;
+        @media(min-width: $tablet) {
+            flex-grow: 1;
+            display: block;
+        }
+    }
+    @media(min-width: $tablet) {
+        justify-content: stretch;
+    }
+    @media(min-width: $desktop) {
+        &__link {
+            height: 100%;
+            width: 18.5%;
+            display: flex;
+        }
+    }
+}

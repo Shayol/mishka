@@ -1,37 +1,45 @@
-*, *::after, *::before {
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/open sans/OpenSans-Regular.ttf") format("true-type");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/open sans/OpenSans-Bold.ttf") format("true-type");
+    font-weight: bold;
+}
+
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: Verdana, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 $top-menu-height-mobile: 80px;
 $top-menu-height-tablet-desktop: 90px;
-
 $tablet: 600px;
 $desktop: 900px;
-
 $hero-height-mobile--index: 280px;
 $hero-height-mobile: 175px;
 $hero-height-tablet-desktop--index: 630px;
 $hero-height-tablet: 220px;
 $hero-height-desktop: 240px;
-
 $page__item-width-tablet: 87%;
-
 $grey-color--index: #f9f9f9;
 $grey-color: #f1f1f1;
 $dark-grey-color: #c7c7c7;
 $grey-border-color: #ececec;
 $green-color: #63d1bb;
 $green-color-2: #45c1ae;
-
 $small-wave-height-mobile: 7px;
 $small-wave-height-tablet: 17px;
 $small-wave-height-desktop: 23px;
-
 $hover-opacity: 0.5;
 $down-opacity: 0.28;
