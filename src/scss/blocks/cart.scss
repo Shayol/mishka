@@ -1,32 +1,36 @@
 .cart {
 
+    text-align: right;
+
     &__icon {
-        display: inline-block;
-        width: 21px;
-        height: 18px;
-        background: url('../img/cart.png') no-repeat;
-        margin: 0 1em;
-        outline: none;
+        fill: #d3d2d2;
+    }
+
+    &__link {
+        text-decoration: none;
+        margin: 0 31px;
     }
 
     &__content {
         font-weight: bold;
-        font-size: 105%;
+        font-size: 17px;
         display: inline-block;
     }
 
     @media(min-width: $tablet) {
         &:hover &__content {
-            opacity: $hover-opacity;
+            fill: $green-color; 
         }
     
         &:hover &__icon {
-            background: url('../img/cart-hover.png') no-repeat;        
+            fill: $green-color;  
+            opacity: $down-opacity;      
         }
         
         
         &:active &__icon {
-            background: url('../img/cart-down.png') no-repeat;
+            fill: $green-color;  
+            opacity: $down-opacity; 
         }
 
         &:active &__content {

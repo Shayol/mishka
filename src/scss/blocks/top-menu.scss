@@ -2,11 +2,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-bottom: 1px solid $grey-border-color;
     &__link {
         display: none;
     }
     &__menu {
-        width: 1em;
+
         @media(min-width: $tablet) {
             display: none;
         }
@@ -15,7 +16,7 @@
         flex-basis: $top-menu-height-mobile;
         height: 100%;
         @media(min-width: $tablet) {
-            flex-basis: $top-menu-height-tablet-desktop;
+            flex-basis: 7.8%;
         }
     }
     &__logo {
@@ -25,7 +26,8 @@
             margin-right: 0;
         }
         @media(min-width: $desktop) {
-            flex-basis: 28.2%;
+            flex-basis: 28%;
+            margin-right: 3%;
         }
     }
     &__cart {
@@ -42,7 +44,10 @@
         &__link {
             height: 100%;
             width: 17.9%;
-            display: flex;
+        }
+
+        &__link--knitting {
+            width: 17.9%;
         }
     }
 }

@@ -22,7 +22,7 @@
 
         &__item--new-arrivals, &__item--sale {
             display: none;
-            width: 21%;
+            width: 17.9%;
         }
 
         &__item--catalog, &__item--knitting {
@@ -32,6 +32,7 @@
 
         &__item--free-deliveries {
             margin-left: auto;
+            font-size: 15px;
         }
 
         &__item--sale {
