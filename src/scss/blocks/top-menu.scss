@@ -3,19 +3,16 @@
     justify-content: flex-end;
     align-items: center;
     border-bottom: 1px solid $grey-border-color;
-    &__link {
-        display: none;
-    }
-    &__menu {
-
-        @media(min-width: $tablet) {
-            display: none;
-        }
+    transition: height 1s ease-in-out;
+    &\--mobile {
+        background-color: white;
     }
     &__search {
+        display: none;
         flex-basis: $top-menu-height-mobile;
         height: 100%;
         @media(min-width: $tablet) {
+            display: flex;
             flex-basis: 7.8%;
         }
     }
@@ -30,6 +27,9 @@
             margin-right: 3%;
         }
     }
+    &__link {
+        display: none;
+    }
     &__cart {
         display: none;
         @media(min-width: $tablet) {
@@ -37,17 +37,17 @@
             display: block;
         }
     }
-    @media(min-width: $tablet) {
-        justify-content: stretch;
-    }
     @media(min-width: $desktop) {
         &__link {
             height: 100%;
             width: 17.9%;
         }
-
         &__link--knitting {
             width: 17.9%;
+        }
+
+        &__menu {
+            display: none;
         }
     }
 }

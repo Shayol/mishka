@@ -1,11 +1,9 @@
 .search {
-    display: none;
     border-right: 1px solid $grey-border-color;
     border-left: 1px solid $grey-border-color;
 
     &__icon {
         fill: #d3d2d2;
-
     }
 
     @media (min-width: $desktop) {
@@ -23,7 +21,6 @@
 
 
     @media (min-width: $tablet) {
-        display: flex;
         align-items: center;
         justify-content: center;
     }

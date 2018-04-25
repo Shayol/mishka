@@ -1,8 +1,5 @@
 .nav-link { 
 
-    align-items: center;
-    display: flex;
-
     &__text {
         display: inline-block;
         color: black;
@@ -11,22 +8,25 @@
         font-size: 17px;
     }
 
-    &__text:hover {
-        opacity: $hover-opacity;
+    @media(min-width: $tablet) { 
+        display: flex;
+        align-items: center;
+        
+        &__text:hover {
+            opacity: $hover-opacity;
+        }
+    
+        &__text:active {
+            opacity: $down-opacity;
+        }
+    
+        &\--catalog {
+            border-right: 1px solid #ececec;
+        }
+    
+        &\--knitting {
+            padding-left: 3%;
+        }
     }
-
-    &__text:active {
-        opacity: $down-opacity;
-    }
-
-    &\--catalog {
-        border-right: 1px solid #ececec;
-    }
-
-    &\--knitting {
-        padding-left: 3%;
-    }
-
-
     
 }
