@@ -2,7 +2,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border-bottom: 1px solid $grey-border-color;
     transition: height 1s ease-in-out;
     &\--mobile {
         background-color: white;
@@ -32,22 +31,26 @@
     }
     &__cart {
         display: none;
-        @media(min-width: $tablet) {
+    }
+    @media(min-width: $tablet) {
+        &__menu {
+            display: none;
+        }
+
+        &__cart {
             flex-grow: 1;
             display: block;
         }
     }
     @media(min-width: $desktop) {
+        border-bottom: 1px solid $grey-border-color;
         &__link {
+            display: flex;
             height: 100%;
             width: 17.9%;
         }
         &__link--knitting {
             width: 17.9%;
-        }
-
-        &__menu {
-            display: none;
         }
     }
 }

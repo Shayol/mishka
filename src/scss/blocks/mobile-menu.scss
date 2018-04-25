@@ -1,5 +1,6 @@
 .mobile-menu {
-    display: none;
+    transition: height 1s ease-out;
+    overflow: hidden;
     position: absolute;
     top: $top-menu-height-mobile;
     height: 0;
@@ -8,13 +9,14 @@
     justify-content: flex-start;
     align-items: baseline;
     width: 100%;
-    height: $top-menu-height-mobile * 4;
-    transition: height 1s ease-out;
+    
     
     &\--visible {
-        z-index: 999;
+        z-index: 10;
         display: flex;
+        height: $top-menu-height-mobile * 4;
     }
+
     &__item {
         height: $top-menu-height-mobile;
         border-bottom: 1px solid $grey-border-color;

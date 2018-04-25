@@ -4,15 +4,18 @@
     }
 
     &__close {
-        display: none;
         fill: #221f1f;
     }
 
-    &__icon\--invisible {
+    &__close-svg {
         display: none;
     }
 
-    &__close\--visible {
+    &__svg\--invisible {
+        display: none;
+    }
+
+    &__close-svg\--visible {
         display: block;
     }
 }
