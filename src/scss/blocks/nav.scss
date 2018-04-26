@@ -20,9 +20,11 @@
     &__item {
         position: relative;
         color: white;
-        line-height: 1.4em;
-        font-size: 20px;
-        padding: 30px 36px;
+        line-height: 24px;
+        font-size: 19px;
+        padding-left: 9.5%;
+        padding-top: 30px;
+        height: 103px;
         font-weight: bold;
         z-index: 1;
 
@@ -35,7 +37,7 @@
     }
 
     &__item--interior {
-        background: url('../img/lamp.png') right 7% top 23px no-repeat, $green-color;
+        background: url('../img/lamp.png') right 10.5% top 23px no-repeat, $green-color;
 
         @media(min-width: $tablet) { 
             background-position-y: 30px; 
@@ -48,7 +50,7 @@
                 width: 100%;
                 top: 100%;
                 left: 0;
-                background: url('../img/wave.svg') top right 3% no-repeat, $green-color;
+                background: url('../img/wave.svg') top right 8.5% no-repeat, $green-color;
                 background-size: 230%;
             }
         }
