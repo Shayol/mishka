@@ -1,9 +1,10 @@
 .mobile-menu {
-    transition: height 1s ease-out;
+    transition: all .8s ease-out;    //z-index also should be transitioned otherwise thre will be no height transitining when closing menu
     overflow: hidden;
     position: absolute;
     top: $top-menu-height-mobile;
     height: 0;
+    z-index: 0;
     background-color: white;
     flex-direction: column;
     justify-content: flex-start;
@@ -35,5 +36,17 @@
     &__link {
         text-decoration: none;
         color: black;
+    }
+
+    &__link + &__link {
+        margin-left: 25px;
+    }
+
+    &__link\--knitting, &__link\--catalog {
+        margin-left: 43px;
+    }
+
+    @media (min-width: $tablet) {
+        display: none;
     }
 }
