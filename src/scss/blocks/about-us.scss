@@ -7,11 +7,11 @@
 
 
     &__title {
-        padding-bottom: 0.7em;
+        padding-bottom: 12px;
     }
 
     &__item {
-        height: 125px;
+        height: 123px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
@@ -19,7 +19,7 @@
     }
 
     &__text {
-        font-size: 1.15em;
+        line-height: 20px;
         font-weight: bold;
     }
 

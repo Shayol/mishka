@@ -18,9 +18,11 @@
         }
     }
 
+    &__link--facebook{
+        margin: 0 40px;
+    }
+
     @media(min-width: $tablet) {
-        &__link--facebook{
-            margin: 0 40px;
-        }
+        
     }
 }

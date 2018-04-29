@@ -1,23 +1,24 @@
-#slide-1:target ~ .slider {
+#slide-1:target~.slider {
     transform: translateX(0%);
 }
-#slide-2:target ~ .slider {
+
+#slide-2:target~.slider {
     transform: translateX(-100%);
 }
-#slide-3:target ~ .slider {
+
+#slide-3:target~.slider {
     transform: translateX(-200%);
 }
-#slide-4:target ~ .slider {
+
+#slide-4:target~.slider {
     transform: translateX(-300%);
 }
-
 
 .slider {
     vertical-align: bottom;
     white-space: nowrap;
     transition: all 0.9s ease-in;
-    font-size: 0;// to get rid of space between inline-block items 
-
+    font-size: 0; // to get rid of space between inline-block items 
     &__slide {
         flex-shrink: 0;
         width: 100%;
@@ -25,66 +26,52 @@
         white-space: initial;
         font-size: 1rem;
     }
-
-
-
     &__anchor {
         position: fixed;
     }
-
     &__text {
-        line-height: 1.8em;
-        margin-bottom: 40px;
-    } 
-
+        font-size: 15px;
+        line-height: 30px;
+        margin-bottom: 26px;
+    }
     &__author-name {
         font-weight: bold;
-        font-size: 1.2em;
+        font-weight: 26px;
+        
     }
-
     &__author-email {
-        font-size: 1.1em;
-        margin-top: 0.7em;
+        margin-top: 8px;
+        line-height: 24px;
     }
-
     &__arrows {
         display: flex;
-        margin: 2.3em 0;
+        margin: 2.1em 0;
     }
-
     &__arrow {
         border: 1px solid #ececec;
         height: 52px;
         flex-basis: 50%;
-
         &:hover {
             opacity: $hover-opacity;
         }
-
         &:active {
             opacity: $down-opacity;
         }
     }
-
     &__arrow\--left {
         background: url('../img/arrow-left.png') 50% no-repeat;
     }
-
     &__arrow\--right {
         background: url('../img/arrow-right.png') 50% no-repeat;
         border-left: 0;
     }
-
-
-    @media(min-width: $tablet) { 
-
+    @media(min-width: $tablet) {
         &__slide {
             // display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             display: inline-block;
         }
-    
         &__author {
             float: left;
         }
@@ -92,13 +79,11 @@
             width: 100%;
             margin: 54px 0 50px 0;
         }
-
         &__arrows {
             margin: 0;
             margin-left: auto;
             width: 137px;
         }
-
         &__arrow {
             border: 0;
         }

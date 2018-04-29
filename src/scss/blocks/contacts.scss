@@ -1,94 +1,84 @@
 .contacts {
-
-    padding-top: 44px + $small-wave-height-mobile;
+    padding-top: 38px + $small-wave-height-mobile;
     max-width: 1050px;
     margin-left: auto;
     margin-right: auto;
-
     &__title {
         font-weight: bold;
-        margin-bottom: 42px;
+        margin-bottom: 26px;
+        font-size: 18px;
+        line-height: 30px;
     }
-
     &__email {
         display: flex;
         justify-content: flex-start;
-        margin-bottom: 42px;
-        flex-wrap: wrap;
+        margin-bottom: 28px;
+        font-size: 15px;
+        line-height: 30px;
     }
-
     &__email-field {
         margin-right: 32px;
     }
-
     &__email-address {
         border-bottom: 1px solid $green-color;
-        padding-bottom: 3px;
+        padding-bottom: -1px;
         &:hover {
             color: $green-color;
         }
-
         &:active {
             color: $green-color;
             opacity: 0.5;
         }
     }
-
     &__address-field {
-        margin-right: 26px;
+        margin-right: 32px;
     }
-
     &__address {
         display: flex;
         justify-content: flex-start;
-        margin-bottom: 42px;
-        flex-wrap: wrap;
-        line-height: 1.8em;
+        margin-bottom: 36px;
+        font-size: 15px;
+        line-height: 30px;
     }
 
+    &__contact-adress {
+        word-wrap: wrap;
+    }
     &__button {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 35px;
+        margin-bottom: 35px;
     }
-
     &__map-iframe {
         height: 457px;
         width: 100%;
     }
-
-    @media(min-width: $tablet) { 
-
+    @media(min-width: $tablet) {
         &__data {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-
         &__title {
             font-size: 2.3em;
             flex-basis: 70%;
         }
-
         &__flag-icon {
             width: 47px;
             height: 81px;
             background: url('../img/contacts-flag-icon.png') no-repeat;
         }
-
-        &__email, &__address {
+        &__email,
+        &__address {
             flex-basis: 50%;
         }
-
         &__button {
             margin-top: 55px;
             margin-bottom: 55px;
             width: initial;
-            display: inline-block;
-            // margin: 55px auto 55px auto;
+            display: inline-block; // margin: 55px auto 55px auto;
         }
     }
-
-    @media(min-width: $desktop) { 
+    @media(min-width: $desktop) {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -98,31 +88,25 @@
         padding-top: 71px + $small-wave-height-desktop;
         padding-bottom: 105px;
         background: url('../img/contacts-flag-icon.png') top 165px left 5% no-repeat;
-
         &__flag-icon {
             display: none;
         }
-
         &__title {
             font-size: 2.8em;
         }
-
         &__data {
             height: initial;
             display: initial;
             width: initial;
             margin: 0;
         }
-
         &__address {
             margin-bottom: 0;
         }
-
         &__map {
             order: 1;
             flex-basis: 50%;
         }
-
         &__button {
             width: initial;
             height: initial;
