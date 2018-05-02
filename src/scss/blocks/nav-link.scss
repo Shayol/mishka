@@ -1,31 +1,27 @@
-.nav-link { 
-
+.nav-link {
     &__text {
         display: inline-block;
         color: black;
         text-decoration: none;
         font-weight: bold;
-        font-size: 17px;
     }
-
-    @media(min-width: $tablet) { 
+    @media(min-width: $tablet) {
         align-items: center;
-        
+        &__text {
+            font-size: 15px;
+            line-height: 24px;
+        }
         &__text:hover {
             opacity: $hover-opacity;
         }
-    
         &__text:active {
             opacity: $down-opacity;
         }
-    
         &\--catalog {
             border-right: 1px solid #ececec;
         }
-    
         &\--knitting {
             padding-left: 3%;
         }
     }
-    
 }

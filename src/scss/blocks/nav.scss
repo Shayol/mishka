@@ -1,22 +1,18 @@
 .nav {
-
     background-color: $grey-color--index;
     position: relative;
-
     &__inner {
         display: flex;
         flex-direction: column;
-
         @media(min-width: $tablet) {
             flex-direction: row;
             align-items: start;
             max-width: 1050px;
             width: $page__item-width-tablet;
             margin-left: auto;
-            margin-right: auto; 
+            margin-right: auto;
         }
     }
-
     &__item {
         position: relative;
         color: white;
@@ -26,21 +22,19 @@
         padding-top: 30px;
         height: 103px;
         font-weight: bold;
-
-        @media(min-width: $tablet) { 
-            font-size: 22px;
+        @media(min-width: $tablet) {
+            font-size: 20px;
+            line-height: 30px;
             width: 50%;
-            padding-top:  35px;
-            padding-bottom: 0;
+            padding-top: 30px;
+            padding-bottom: 5px;
+            padding-left: 5.5%;
         }
     }
-
     &__item--interior {
         background: url('../img/lamp.png') right 10.5% top 23px no-repeat, $green-color;
-
-        @media(min-width: $tablet) { 
-            background-position-y: 30px; 
-
+        @media(min-width: $tablet) {
+            background-position-y: 30px;
             &::after {
                 content: '';
                 display: block;
@@ -49,29 +43,22 @@
                 width: 100%;
                 top: 100%;
                 left: 0;
-                background: url('../img/wave.svg') top right 8.5% no-repeat, $green-color;
+                background: url('../img/wave.svg') top right 50% no-repeat, $green-color;
                 background-size: 230%;
             }
         }
- 
         &:hover {
             background-image: url("../img/lamp-hover.png");
             padding-bottom: 40px;
         }
-
         &:active {
             background-image: url("../img/lamp-active.png");
             color: rgba(255, 255, 255, 0.4);
         }
-        
     }
-
     &__item--toys {
-        background: url('../img/toys.png') right 7% top 20px no-repeat, #56c3b2; 
-
-        @media(min-width: $tablet) { 
-            background-position-y: 31px; 
-
+        background: url('../img/toys.png') right 10% top 20px no-repeat, #56c3b2;
+        @media(min-width: $tablet) {
             &::after {
                 content: '';
                 display: block;
@@ -80,19 +67,23 @@
                 width: 100%;
                 top: 100%;
                 left: 0;
-                background: url('../img/wave.svg') top left 3% no-repeat, #56c3b2;
+                background: url('../img/wave.svg') top left 50% no-repeat, #56c3b2;
                 background-size: 230%;
             }
         }
-
         &:hover {
             background-image: url("../img/toys-hover.png");
             padding-bottom: 40px;
         }
-
         &:active {
             background-image: url("../img/toys-active.png");
             color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    @media (min-width: $tablet) {
+        &__item\--toys {
+            background-position: right 12% top 31px;
         }
     }
 }

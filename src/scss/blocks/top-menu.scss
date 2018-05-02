@@ -8,17 +8,16 @@
     }
     &__search {
         display: none;
-        flex-basis: $top-menu-height-mobile;
         height: 100%;
         @media(min-width: $tablet) {
             display: flex;
-            flex-basis: 7.8%;
+            width: 84px;
         }
     }
     &__logo {
         margin-right: 42%;
         @media(min-width: $tablet) {
-            flex-basis: 45%;
+            flex-basis: 48.5%;
             margin-right: 0;
         }
         @media(min-width: $desktop) {
