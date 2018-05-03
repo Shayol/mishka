@@ -33,12 +33,13 @@
             display: grid;
             grid-template-columns: 50% 35% 15%;
             grid-template-rows: repeat(3, auto);
-            grid-row-gap: 3.3rem;
+            // grid-row-gap: 2rem;
             grid-template-areas: "name name title" "product photo photo" "priceAndOrder photo photo";
         }
         @media(min-width: $desktop) {
             grid-template-columns: 12% 28% 50%;
             grid-template-rows: repeat(3, auto);
+            grid-row-gap: 3rem;
             grid-column-gap: 5%;
             grid-template-areas: none;
         }
@@ -89,7 +90,7 @@
         margin-top: 23px;
         grid-area: product;
         @media(min-width: $tablet) {
-            margin: 0 13% 0 0;
+            margin: 48px 13% 0 0;
         }
         @media(min-width: $desktop) {
             grid-area: 2 / 2;
@@ -100,7 +101,10 @@
         line-height: 24px;
         margin-bottom: 18px;
         @media(min-width: $tablet) {
-            margin-bottom: 3rem;
+            font-size: 17px;
+            line-height: 30px;
+            margin-top: -7px;
+            margin-bottom: 38px;
         }
     }
     &__characteristic {
@@ -108,7 +112,7 @@
         font-size: 15px;
         line-height: 20px;
         border-bottom: 1px solid #ececec;
-        height: 39px;
+        height: 38px;
         align-items: center;
     }
     &__parameter {
@@ -121,7 +125,7 @@
         grid-area: photo;
         margin: 28px 0 22px 0;
         @media(min-width: $tablet) {
-            margin: 0;
+            margin: 48px 0 0 0;
         }
         @media(min-width: $desktop) {
             grid-area: 1 / 3 / span 3 / span 1;
@@ -135,12 +139,12 @@
     &__price-and-order {
         grid-area: priceAndOrder;
         @media(min-width: $tablet) {
-            margin: 0;
             align-self: end;
             margin-right: 13%;
         }
         @media(min-width: $desktop) {
             grid-area: 3 / 2;
+            margin: 0;
         }
     }
     &__price {
@@ -149,7 +153,21 @@
         font-weight: bold;
         margin-bottom: 25px;
         @media(min-width: $tablet) {
-            font-size: 1.2em;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 35px;
+        }
+    }
+    @media(min-width: $tablet) {
+        &__parameter {
+            flex-basis: 33%;
+        }
+        &__data {
+            flex-basis: 67%;
+        }
+
+        &__order {
+            margin-bottom: 5px;
         }
     }
 }
