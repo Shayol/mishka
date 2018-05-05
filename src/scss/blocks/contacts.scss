@@ -40,41 +40,58 @@
         font-size: 15px;
         line-height: 30px;
     }
-
     &__contact-adress {
         word-wrap: wrap;
     }
     &__button {
         margin-top: 35px;
         margin-bottom: 35px;
+        width: 81%;
+        margin-right: auto;
+        margin-left: auto;
     }
     &__map-iframe {
         height: 457px;
         width: 100%;
     }
     @media(min-width: $tablet) {
+        padding-top: 74px + $small-wave-height-mobile;
         &__data {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            align-items: flex-start;
         }
         &__title {
-            font-size: 2.3em;
             flex-basis: 70%;
+            font-size: 43px;
+            line-height: 50px;
+            margin-bottom: 48px;
         }
         &__flag-icon {
             width: 47px;
             height: 81px;
+            margin-top: -18px;
             background: url('../img/contacts-flag-icon.png') no-repeat;
         }
         &__email,
         &__address {
             flex-basis: 50%;
+            font-size: 17px;
+            margin-bottom: 55px;
+        }
+        &__email-field, &__address-field {
+            margin-right: 26px;
         }
         &__button {
-            margin-top: 55px;
-            margin-bottom: 55px;
-            width: initial;
+            margin-top: 50px;
+            margin-bottom: 57px;
+            margin-left: calc(50% - 230px/2);
+            // margin-right: calc(50% - 230px/2);
+            padding-left: initial;
+            padding-right: initial;
+            width: 230px;
+            // margin-left: calc(50% - 230px/2);
             display: inline-block; // margin: 55px auto 55px auto;
         }
     }

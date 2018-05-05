@@ -28,6 +28,7 @@
         background-size: 350px 457px;
         height: 525px;
         padding-bottom: 68px;
+        padding-top: 80px;
         &__content {
             display: flex;
             flex-wrap: wrap;
@@ -43,6 +44,11 @@
         &::after {
             height: $small-wave-height-tablet;
             background-size: auto $small-wave-height-tablet;
+        }
+
+        &__button {
+            padding-left: 2.3em;
+            padding-right: 2.3em;
         }
     }
     @media(min-width: $desktop) {

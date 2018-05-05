@@ -37,7 +37,6 @@
     &__author-name {
         font-weight: bold;
         font-weight: 26px;
-        
     }
     &__author-email {
         margin-top: 8px;
@@ -75,17 +74,30 @@
         &__author {
             float: left;
         }
+        &__author-name {
+            font-size: 18px;
+            line-height: 24px;
+        }
         &__text {
             width: 100%;
-            margin: 54px 0 50px 0;
+            margin: 47px 0 52px 0;
+            font-size: 17px;
+            line-height: 30px;
         }
         &__arrows {
-            margin: 0;
-            margin-left: auto;
+            margin: 0 17px 0 auto;
+            padding-top: 20px;
             width: 137px;
         }
         &__arrow {
             border: 0;
+            height: 26px;
+        }
+        &__arrow\--left {
+            background-position-x: 0; 
+        }
+        &__arrow\--right {
+            background-position-x: 100%; 
         }
     }
 }
