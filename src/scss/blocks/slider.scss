@@ -100,4 +100,11 @@
             background-position-x: 100%; 
         }
     }
+    @media(min-width: $desktop) { 
+
+        &__text {
+            margin-bottom: 40px;
+            padding-right: 40px;
+        }
+     }
 }

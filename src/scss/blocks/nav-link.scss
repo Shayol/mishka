@@ -23,5 +23,11 @@
         &\--knitting {
             padding-left: 3%;
         }
+        @media(min-width: $desktop) { 
+            &__text {
+                font-size: inherit;
+            }
+        }
+
     }
 }

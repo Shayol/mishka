@@ -52,15 +52,16 @@
         }
     }
     @media(min-width: $desktop) {
-        padding-top: 70px + $small-wave-height-desktop;
+        padding-top: 67px;
         &__inner {
-            margin-left: 17%;
+            margin-left: 16.5%;
+            padding-top:0;
         }
         &__content {
             align-content: flex-start;
         }
         &__item {
-            width: 33.33%;
+            width: 40%;
         }
     }
 }
