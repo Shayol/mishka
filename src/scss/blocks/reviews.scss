@@ -52,19 +52,18 @@
         }
     }
     @media(min-width: $desktop) {
-        padding-left: 14.5%;
+        padding-left: 14%;
         max-width: 1050px;
         margin-left: auto;
         margin-right: auto; // padding-bottom: 60px;
-        margin-top: 60px;
+        margin-top: 70px;
+        padding-top: 75px;
+        &__content {
+            width: 100%;
+        }
         &::after {
             height: $small-wave-height-desktop;
             background-size: auto $small-wave-height-desktop;
-        }
-    }
-    @media(min-width: 1185px) {
-        &__content {
-            width: 100%;
         }
     }
 }

@@ -3,6 +3,9 @@
     max-width: 1050px;
     margin-left: auto;
     margin-right: auto;
+    &__flag-icon\--desktop {
+        display: none;
+    }
     &__title {
         font-weight: bold;
         margin-bottom: 26px;
@@ -72,7 +75,6 @@
             width: 47px;
             height: 81px;
             margin-top: -18px;
-            background: url('../img/contacts-flag-icon.png') no-repeat;
         }
         &__email,
         &__address {
@@ -87,12 +89,10 @@
             margin-top: 50px;
             margin-bottom: 57px;
             margin-left: calc(50% - 230px/2);
-            // margin-right: calc(50% - 230px/2);
             padding-left: initial;
             padding-right: initial;
             width: 230px;
-            // margin-left: calc(50% - 230px/2);
-            display: inline-block; // margin: 55px auto 55px auto;
+            display: inline-block;
         }
     }
     @media(min-width: $desktop) {
@@ -100,34 +100,49 @@
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-end;
-        height: 633px + $small-wave-height-desktop;
-        padding-left: 12%;
-        padding-top: 71px + $small-wave-height-desktop;
-        padding-bottom: 105px;
-        background: url('../img/contacts-flag-icon.png') top 165px left 5% no-repeat;
+        height: 457px;
+        padding-top: 0;
+        margin-top: 94px;
+        margin-bottom: 105px;
+
+        &__title {
+            margin-bottom: 43px;
+        }
+        
         &__flag-icon {
             display: none;
         }
-        &__title {
-            font-size: 2.8em;
+        &__flag-icon\--desktop {
+            padding-top: 60px;
+            display: block;
+            order: -1;
+            flex-basis: 100%;
+            width: 16.5%;
+            margin: 0;
+            text-align: center;
         }
         &__data {
             height: initial;
             display: initial;
-            width: initial;
+            width: 33.5%;
             margin: 0;
+        }
+        &__email {
+            margin-bottom: 30px;
         }
         &__address {
             margin-bottom: 0;
         }
         &__map {
             order: 1;
-            flex-basis: 50%;
+            flex-basis: 100%;
+            width: 50%;
         }
         &__button {
-            width: initial;
+            padding-left: 2em;
+            padding-right: 2em;
             height: initial;
-            margin: 84px 0 0 0;
+            margin: 78px 0 0 0;
             align-self: flex-start;
         }
     }
