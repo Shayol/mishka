@@ -1,102 +1,89 @@
 .product {
-
     border: 1px solid $grey-border-color;
-
-
     &__picture {
         width: 100%;
-        height: auto;
-        margin-bottom: -5px; //space at the bottom
+        height: auto; // margin-bottom: -5px; //space at the bottom
     }
-
     &__description {
-        padding: 30px 28px;
+        margin: 25px 11%;
         display: flex;
         flex-direction: column;
     }
-
     &__order {
         display: flex;
         justify-content: space-between;
         border-top: 1px solid $grey-border-color;
-        padding-top: 28px;
+        padding-top: 22px;
     }
-
     &__name {
         font-weight: bold;
+        line-height: 24px;
     }
-
     &__info {
-        font-size: 0.8em;
-        padding-bottom: 28px;
-        padding-top: 17px;
+        font-size: 13px;
+        padding-bottom: 17px;
+        padding-top: 6px;
+        line-height: 30px;
     }
-
     &__price {
         font-weight: bold;
+        font-size: 15px;
+        line-height: 24px;
     }
-
-    @media(min-width: $tablet) { 
-
+    @media(min-width: $tablet) {
         display: flex;
-
         &__img {
             flex-basis: 50%;
+            margin-bottom: -5px; //weird gap at the bottom because of picture tag???
         }
-
         &__name {
-            font-size: 1.3em;
+            font-size: 20px;
+            line-height: 24px;
         }
-
         &__info {
-            font-size: 1em;
+            font-size: 15px;
+            line-height: 30px;
         }
-
         &__description {
             justify-content: initial;
             flex-basis: 50%;
+            margin: 0;
+            padding: 4%;
         }
-
         &__order {
             margin-top: auto;
         }
+        &__price {
+            font-size: 17px;
+            line-height: 24px;
+        }
     }
-
-    @media(min-width: $desktop) { 
+    @media(min-width: $desktop) {
         flex-direction: column;
         position: relative;
-
         &:hover &__description {
-            box-shadow: 1px 6px 9px $grey-border-color,
-                        -1px 0 9px $grey-border-color;
+            box-shadow: 1px 6px 9px $grey-border-color, -1px 0 9px $grey-border-color;
         }
-
         &:hover &__name {
             opacity: $hover-opacity;
         }
-
         &:active &__description {
-            box-shadow: 0.5px 4px 5px $grey-border-color,
-                        -0.5px 0 5px $grey-border-color;
+            box-shadow: 0.5px 4px 5px $grey-border-color, -0.5px 0 5px $grey-border-color;
         }
-
         &:active &__name {
             opacity: $down-opacity;
         }
-
         &__description {
-            height: 200px;
+            height: 197px;
+            padding: 28px 27px;
         }
-
         &__img {
             flex-basis: initial;
         }
-
         &__info {
             padding-bottom: 0;
-            padding-top: 15px;
+            // padding-top: 15px;
         }
-
         &__order {
             height: 45px;
         }
