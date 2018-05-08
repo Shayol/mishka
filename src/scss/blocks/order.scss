@@ -1,19 +1,18 @@
 .order {
-
     &__intro {
-        font-size: 0.9em;
-        line-height: 1.5em;
-        padding: 30px 0;
+        font-size: 13px;
+        line-height: 24px;
+        padding: 24px 0 0 0;
+        margin-bottom: 22px;
     }
-
     &__header {
         text-transform: uppercase;
         font-weight: bold;
         color: $green-color;
         position: relative;
         overflow: hidden;
+        line-height: 16px;
     }
-
     &__header::after {
         content: '';
         position: absolute;
@@ -21,71 +20,60 @@
         width: 100%;
         top: 50%;
         left: 62px;
-        background-color: $green-color;        
+        background-color: $green-color;
     }
-
     &__group {
         display: flex;
         flex-direction: column;
     }
-
     &__inner {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
-
     &__inner\--type {
         height: 160px;
         justify-content: center;
     }
-
     &__inner\--color {
         height: 400px;
         justify-content: space-evenly;
     }
-
     &__inner\--name {
-        height: 318px;
+        height: 314px;
         justify-content: space-between;
-        padding: 32px 0 34px 0;
+        padding: 32px 0 32px 0;
     }
-
     &__inner\--email {
-        height: 95px;
-        padding: 9px 0 12px 0;
+        height: 90px;
+        padding: 6px 0 0 0;
     }
-
     &__inner\--phone {
-        height: 95px;
-        padding: 9px 0 34px 0;
+        height: 90px;
+        padding: 6px 0 0 0;
     }
-
     &__field {
         display: flex;
     }
-
-    &__field\--type, &__field\--color {
+    &__field\--type,
+    &__field\--color {
         align-items: center;
         position: relative;
     }
-
     &__field\--name {
         flex-direction: column;
     }
-
-    &__radio, &__checkbox {
+    &__radio,
+    &__checkbox {
         height: 40px;
         width: 40px;
         opacity: 0;
         z-index: 3;
         margin: 0 22px 0 0;
     }
-
     &__field\--type-first {
         margin-bottom: 20px;
     }
-
     &__decorate-form-element {
         display: inline-block;
         position: absolute;
@@ -93,12 +81,10 @@
         width: 40px;
         border: 2px solid black;
     }
-
     &__decorate-form-element\--radio {
         border-radius: 50%;
     }
-
-    &__radio:checked + &__decorate-form-element::after {
+    &__radio:checked+&__decorate-form-element::after {
         content: '';
         position: absolute;
         height: 16px;
@@ -110,24 +96,19 @@
         background-color: $green-color;
         z-index: 2;
     }
-
-    &__radio:hover + &__decorate-form-element {
+    &__radio:hover+&__decorate-form-element {
         border-color: $green-color;
     }
-
-    &__checkbox:hover + &__decorate-form-element {
+    &__checkbox:hover+&__decorate-form-element {
         border-color: $green-color;
     }
-
-    &__radio:active + &__decorate-form-element {
+    &__radio:active+&__decorate-form-element {
         border-color: $dark-grey-color;
     }
-
-    &__checkbox:active + &__decorate-form-element {
+    &__checkbox:active+&__decorate-form-element {
         border-color: $dark-grey-color;
     }
-
-    &__checkbox:checked + &__decorate-form-element::after {
+    &__checkbox:checked+&__decorate-form-element::after {
         content: '';
         position: absolute;
         height: 20px;
@@ -139,261 +120,221 @@
         border-bottom: 2px solid black;
         z-index: 2;
     }
-
     &__label {
         font-weight: bold;
+        line-height: 18px;
     }
-
     &__input {
         height: 52px;
         border: 0;
         border-bottom: 2px solid black;
         outline: none;
         font-size: 1rem;
-
-        &:hover, &:active {
+        &:hover,
+        &:active {
             border-color: $green-color;
         }
     }
-
     &__input::placeholder {
-        font-size: 1rem;
+        font-size: 17px;
         color: $dark-grey-color;
+        font-family: "Open Sans";
         opacity: 1;
     }
-
     &__input\--phone {
         background: url('../img/phone.png') top 50% right 8px no-repeat;
-
-        &:hover, &:active {
+        &:hover,
+        &:active {
             background-image: url('../img/phone-active.png')
         }
     }
-
     &__input\--email {
         background: url('../img/email.png') top 50% right 8px no-repeat;
     }
-
     &__textarea {
         padding: 1rem;
-        height: 140px;
+        height: 142px;
         margin: 24px 0 18px 0;
         border: 2px solid black;
         outline: none;
         resize: none;
-
-        &:hover, &:active {
+        &:hover,
+        &:active {
             border-color: $green-color;
         }
     }
-
     &__textarea::placeholder {
-        font-size: 1rem;
+        font-size: 17px;
+        font-family: "Open Sans";
+        line-height: 18px;
         color: $dark-grey-color;
         opacity: 1;
     }
-
     &__required-fields {
-        font-size: 0.9em;
+        font-size: 14px;
+        line-height: 16px;
     }
-
     &__submit {
         background-color: white;
-        margin: 30px 0 50px 0;
-        width: 100%; 
-        font-size: 1rem;
+        margin: 30px 0 55px 0;
+        width: 100%;
+        font-size: 1em;
     }
-
-    @media(min-width: $tablet) { 
+    @media(min-width: $tablet) {
         &__intro {
             padding: 88px 0 62px 0;
             font-size: 1.1em;
             line-height: 1.4em;
         }
-
         &__group {
             flex-direction: row;
             align-items: flex-start;
         }
-
-        &__group\--phone, &__group\--email, &__group--notes {
+        &__group\--phone,
+        &__group\--email,
+        &__group--notes {
             align-items: baseline;
         }
-
         &__header {
             flex-basis: 25%;
             padding-top: 20px;
-
             &::after {
                 display: none;
             }
         }
-
-
-        &__color, &__phone, &__email {
+        &__color,
+        &__phone,
+        &__email {
             background-color: $grey-color;
         }
-
         &__color {
             padding: 50px 0 50px 0;
         }
-
         &__name {
             padding: 50px 0 50px 0;
         }
-
         &__phone {
             padding-top: 50px;
         }
-
         &__email {
             padding-bottom: 50px;
         }
-
         &__notes {
             padding: 50px 0 50px 0;
         }
-
-        &__radio, &__checkbox {
+        &__radio,
+        &__checkbox {
             height: 52px;
             width: 52px;
             margin-right: 28px;
         }
-
         &__textarea {
-            margin: 0;                        
+            margin: 0;
         }
-
         &__bottom-section {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
         }
-
         &__submit {
             width: initial;
             order: -1;
             margin-top: 0;
         }
-    
         &__decorate-form-element {
             height: 52px;
             width: 52px;
         }
-
-        &__radio:checked + &__decorate-form-element::after {
+        &__radio:checked+&__decorate-form-element::after {
             height: 22px;
             width: 22px;
         }
-
-        &__checkbox:checked + &__decorate-form-element::after {
+        &__checkbox:checked+&__decorate-form-element::after {
             height: 30px;
             width: 15px;
         }
-
-
         &__inner {
             flex-grow: 1;
             justify-content: space-between;
         }
-
         &__inner\--type {
             height: 178px;
             padding-bottom: 50px;
         }
-    
         &__inner\--color {
             height: 204px;
             flex-wrap: wrap;
             justify-content: flex-start;
         }
-    
         &__inner\--name {
             height: 204px;
             padding: 0;
         }
-
         &__inner\--phone {
             height: 64px;
             padding: 0;
             flex-direction: row;
             align-items: flex-start;
         }
-    
         &__inner\--email {
             height: 64px;
             padding: 0;
             flex-direction: row;
             align-items: flex-end;
         }
-
-        &__field\--color:nth-child(2), &__field\--color:nth-child(5) {
+        &__field\--color:nth-child(2),
+        &__field\--color:nth-child(5) {
             margin-top: 24px;
             margin-bottom: 24px;
         }
-
         &__field\--name {
             flex-direction: row;
             align-items: center;
             justify-content: stretch;
         }
-
         &__label\--name {
             margin-right: 25px;
         }
-        
         &__input {
             flex-grow: 1;
         }
-
     }
-
-    @media(min-width: $desktop) { 
-
+    @media(min-width: $desktop) {
         &__intro {
             padding: 140px 0 12px 0;
             margin: 0 17% 0 17%;
         }
-
         &__header {
             flex-basis: 17%;
             padding-left: 6%;
         }
-
         &__inner {
             padding-right: 17%;
-
             &\--color {
                 padding-right: 0;
             }
         }
-
         &__type {
             padding-top: 50px;
         }
-
-        &__inner\--color { 
+        &__inner\--color {
             height: 128px;
             flex-basis: 83%;
             flex-direction: row;
             justify-content: center;
             align-content: space-between;
         }
-
         &__field\--color {
             flex-basis: 33.32%;
         }
-
-        &__field\--color:nth-child(2), &__field\--color:nth-child(5) {
+        &__field\--color:nth-child(2),
+        &__field\--color:nth-child(5) {
             margin-top: 0;
             margin-bottom: 0;
         }
-
         &__bottom-section {
             padding-left: 17%;
             padding-right: 17%;
         }
-
-
     }
 }
