@@ -330,28 +330,27 @@
     }
     @media(min-width: $desktop) {
         &__intro {
-            padding: 140px 0 12px 0;
+            padding: 140px 0 0 0;
             margin: 0 17% 0 17%;
         }
         &__header {
-            flex-basis: 17%;
+            flex-basis: 16.8%;
             padding-left: 6%;
+            padding-top: 17px;
         }
         &__inner {
-            padding-right: 17%;
+            padding-right: 16.8%;
             &\--color {
-                padding-right: 0;
+                padding-right: 9%;
+                height: 128px;
+                flex-basis: 83.2%;
+                flex-direction: row;
+                justify-content: center;
+                align-content: space-between;
             }
         }
         &__type {
-            padding-top: 50px;
-        }
-        &__inner\--color {
-            height: 128px;
-            flex-basis: 83%;
-            flex-direction: row;
-            justify-content: center;
-            align-content: space-between;
+            padding-top: 55px;
         }
         &__field\--color {
             flex-basis: 33.32%;
@@ -361,9 +360,18 @@
             margin-top: 0;
             margin-bottom: 0;
         }
+        &__input\--phone, &__input\--email {
+            background-position: top 50% right 0;
+        }
         &__bottom-section {
-            padding-left: 17%;
-            padding-right: 17%;
+            // padding-left: 16.8%;
+            // padding-right: 17%;
+            width: 56%;
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+        &__submit {
+            margin: 0;
         }
     }
 }
