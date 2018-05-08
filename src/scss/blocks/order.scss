@@ -182,9 +182,14 @@
     }
     @media(min-width: $tablet) {
         &__intro {
-            padding: 88px 0 62px 0;
-            font-size: 1.1em;
-            line-height: 1.4em;
+            padding: 82px 0 58px 0;
+            font-size: 1em;
+            line-height: 30px;
+            margin: 0;
+        }
+        &__label {
+            font-size: 19px;
+            line-height: 18px;
         }
         &__group {
             flex-direction: row;
@@ -214,13 +219,13 @@
             padding: 50px 0 50px 0;
         }
         &__phone {
-            padding-top: 50px;
+            padding-top: 48px;
         }
         &__email {
-            padding-bottom: 50px;
+            padding-bottom: 48px;
         }
         &__notes {
-            padding: 50px 0 50px 0;
+            padding: 50px 0 54px 0;
         }
         &__radio,
         &__checkbox {
@@ -228,8 +233,18 @@
             width: 52px;
             margin-right: 28px;
         }
+        &__input\--email {
+            background-position: top 50% right 20px;
+        }
+        &__input\--phone {
+            background-position: top 40% right 25px;
+        }
         &__textarea {
             margin: 0;
+        }
+        &__textarea::placeholder {
+            font-size: 19px;
+            line-height: 18px;
         }
         &__bottom-section {
             display: flex;
@@ -238,6 +253,8 @@
         }
         &__submit {
             width: initial;
+            padding-right: 1.7em;
+            padding-left: 1.7em;
             order: -1;
             margin-top: 0;
         }
@@ -264,7 +281,9 @@
         &__inner\--color {
             height: 204px;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            flex-basis: 75%;
+            flex-direction: row;
+            align-content: space-between;
         }
         &__inner\--name {
             height: 204px;
@@ -282,10 +301,11 @@
             flex-direction: row;
             align-items: flex-end;
         }
-        &__field\--color:nth-child(2),
-        &__field\--color:nth-child(5) {
-            margin-top: 24px;
-            margin-bottom: 24px;
+        &__field\--color {
+            width: 47.5%;
+        }
+        &__field\--color:nth-child(odd) {
+            width: 52.5%;
         }
         &__field\--name {
             flex-direction: row;
@@ -297,6 +317,15 @@
         }
         &__input {
             flex-grow: 1;
+            padding-left: 17px;
+        }
+        &__input::placeholder {
+            font-size: 19px;
+            line-height: 18px;
+        }
+        &__required-fields {
+            font-size: 17px;
+            line-height: 30px;
         }
     }
     @media(min-width: $desktop) {
