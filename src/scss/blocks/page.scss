@@ -16,7 +16,6 @@
 
     &__top-menu {
         height: $top-menu-height-mobile;
-        border-bottom: 1px solid $grey-border-color;
         
         @media(min-width: $tablet) { 
             height: $top-menu-height-tablet-desktop;

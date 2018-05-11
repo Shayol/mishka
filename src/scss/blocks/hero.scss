@@ -58,6 +58,8 @@
         }
     }
     @media(min-width: $desktop) {
+        border-top: 1px solid $grey-border-color;
+
         &__title {
             top: 50%;
             font-size: 53px;

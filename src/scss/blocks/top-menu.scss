@@ -3,6 +3,7 @@
     justify-content: flex-end;
     align-items: center;
     transition: height 1s ease-in-out;
+    border-bottom: 1px solid $grey-border-color;
     &\--mobile {
         background-color: white;
     }
@@ -42,7 +43,7 @@
         }
     }
     @media(min-width: $desktop) {
-        border-bottom: 1px solid $grey-border-color;
+        border-bottom: 0;
         &__link {
             display: flex;
             height: 100%;
