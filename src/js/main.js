@@ -1,4 +1,5 @@
 import "../scss/main.scss";
+var L = require('leaflet');
 
 window.addEventListener('load', function () {
     NodeList.prototype.forEach = Array.prototype.forEach;
@@ -25,7 +26,7 @@ window.addEventListener('load', function () {
         el.addEventListener('click', (event) => {
             modal.style.display = 'block';
             var modalWindow = modal.querySelector('.modal__window');
-            var height = modalWindow.style.height.slice(0,-2);
+            var height = modalWindow.style.height.slice(0, -2);
             modalWindow.style.top = Math.round(window.pageYOffset) + "px";
         });
     });
@@ -37,4 +38,19 @@ window.addEventListener('load', function () {
             modal.style.display = 'none';
         }
     });
+
+    var map = L.map('map', {
+        center: [51.505, -0.09],
+        zoom: 13
+    });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var myIcon = L.icon({
+        iconUrl: '../img/marker.svg',
+        iconSize: [68, 101],
+        iconAnchor: [34, 101],
+    });
+    L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 });
