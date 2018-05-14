@@ -1,7 +1,9 @@
 import "../scss/main.scss";
 var L = require('leaflet');
+import marker from "../img/marker.svg";
 
 window.addEventListener('load', function () {
+
     NodeList.prototype.forEach = Array.prototype.forEach;
 
     var menu = document.querySelector('.top-menu__menu');
@@ -39,18 +41,23 @@ window.addEventListener('load', function () {
         }
     });
 
-    var map = L.map('map', {
-        center: [51.505, -0.09],
-        zoom: 13
-    });
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
 
-    var myIcon = L.icon({
-        iconUrl: '../img/marker.svg',
-        iconSize: [68, 101],
-        iconAnchor: [34, 101],
-    });
-    L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
+
+    if (document.querySelector("#map")) {
+        var map = L.map('map', {
+            center: [51.505, -0.09],
+            zoom: 13
+        });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var myIcon = L.icon({
+            iconUrl: marker,
+            iconSize: [68, 101],
+            iconAnchor: [34, 101],
+        });
+        L.marker([51.505, -0.09], { icon: myIcon }).addTo(map);
+    }
+
 });
