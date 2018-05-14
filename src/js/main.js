@@ -60,4 +60,38 @@ window.addEventListener('load', function () {
         L.marker([51.505, -0.09], { icon: myIcon }).addTo(map);
     }
 
+
+    var playButton = document.querySelector(".production-video__custom-ytb-button");
+
+    if (playButton) {
+        var tag = document.createElement('script');
+        tag.id = 'iframe-demo';
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        window.onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
+            player = new YT.Player('production-video', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        playButton.addEventListener('click', () => {
+            player.playVideo();
+        });
+
+        function onPlayerStateChange(event) {
+            if(event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                playButton.style.display = 'inline-block';
+            }
+            if(event.data == YT.PlayerState.PLAYING) {
+                playButton.style.display = 'none';
+            }
+        }
+    }
+
+
 });
