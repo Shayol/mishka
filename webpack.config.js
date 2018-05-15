@@ -16,12 +16,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
         test: /\.html$/,
         exclude: /(index|catalog|form)\.html$/, //without this HtmlWebPackPlugin will not work with template file correctly
         use: [
           {
             loader: "html-loader",
-            options: { 
+            options: {
               attrs: ['img:src', 'source:srcset'], //allows to use picture tag
               minimize: true
             }
@@ -55,26 +62,26 @@ module.exports = {
               sourceMap: true
             }
           }
-        ]
+          ]
         })
       },
       {
-        test:  /\.(eot|woff|ttf)$/,
+        test: /\.(eot|woff|ttf)$/,
         use: {
           loader: "file-loader",
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/'  
+            outputPath: 'fonts/'
           }
         }
       },
       {
-        test:  /\.(jpg|png|svg)$/,
+        test: /\.(jpg|png|svg)$/,
         use: {
           loader: "file-loader",
           options: {
             name: '[name].[ext]',
-            outputPath: 'img/'  
+            outputPath: 'img/'
           }
         }
       }

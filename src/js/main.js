@@ -1,5 +1,6 @@
 import "../scss/main.scss";
 var L = require('leaflet');
+// import L from "module-name";
 import marker from "../img/marker.svg";
 
 window.addEventListener('load', function () {
@@ -14,6 +15,8 @@ window.addEventListener('load', function () {
 
     var addToCart = document.querySelectorAll(".js-add-to-cart");
     var modal = document.querySelector(".modal");
+
+    var playButton = document.querySelector(".production-video__custom-ytb-button");
 
     menu.addEventListener('click', (event) => {
         topMenu.classList.toggle('top-menu--mobile');
@@ -60,8 +63,6 @@ window.addEventListener('load', function () {
         L.marker([51.505, -0.09], { icon: myIcon }).addTo(map);
     }
 
-
-    var playButton = document.querySelector(".production-video__custom-ytb-button");
 
     if (playButton) {
         var tag = document.createElement('script');
