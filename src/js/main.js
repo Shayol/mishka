@@ -1,6 +1,5 @@
 import "../scss/main.scss";
-var L = require('leaflet');
-// import L from "module-name";
+import L from "leaflet";
 import marker from "../img/marker.svg";
 
 window.addEventListener('load', function () {
