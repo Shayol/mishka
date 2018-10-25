@@ -4,6 +4,7 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        position: relative;
         @media(min-width: $tablet) {
             flex-direction: row;
             align-items: start;
@@ -20,7 +21,7 @@
         font-size: 19px;
         padding-left: 9.5%;
         padding-top: 30px;
-        height: 103px;
+        height: 119px;
         font-weight: bold;
         @media(min-width: $tablet) {
             font-size: 20px;
@@ -34,18 +35,18 @@
     &__item--interior {
         background: url('../img/lamp.png') right 10.5% top 23px no-repeat, $green-color;
         @media(min-width: $tablet) {
-            background-position-y: 30px;
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                height: 16px;
-                width: 100%;
-                top: 100%;
-                left: 0;
-                background: url('../img/wave.svg') top right 50% no-repeat, $green-color;
-                background-size: 240%;
-            }
+            // background-position-y: 30px;
+            // &::after {
+            //     content: '';
+            //     display: block;
+            //     position: absolute;
+            //     height: 16px;
+            //     width: 100%;
+            //     top: 100%;
+            //     left: 0;
+            //     background: url('../img/wave.svg') top right 50% no-repeat, $green-color;
+            //     background-size: 240%;
+            // }
         }
         &:hover {
             background-image: url("../img/lamp-hover.png");
@@ -59,17 +60,17 @@
     &__item--toys {
         background: url('../img/toys.png') right 10% top 20px no-repeat, #56c3b2;
         @media(min-width: $tablet) {
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                height: 16px;
-                width: 100%;
-                top: 100%;
-                left: 0;
-                background: url('../img/wave.svg') top left 50% no-repeat, #56c3b2;
-                background-size: 240%;
-            }
+            // &::after {
+            //     content: '';
+            //     display: block;
+            //     position: absolute;
+            //     height: 16px;
+            //     width: 100%;
+            //     top: 100%;
+            //     left: 0;
+            //     background: url('../img/wave.svg') top left 50% no-repeat, #56c3b2;
+            //     background-size: 240%;
+            // }
         }
         &:hover {
             background-image: url("../img/toys-hover.png");
@@ -80,18 +81,26 @@
             color: rgba(255, 255, 255, 0.4);
         }
     }
-
     @media (min-width: $tablet) {
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 16px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: url('../img/wave.svg') 50% 100% repeat-x; // background-size: 140%;
+        }
         &__item\--toys {
             background-position: right 12% top 31px;
         }
     }
-    @media (min-width: $desktop) { 
+    @media (min-width: $desktop) {
         &__item {
             font-size: 20px;
             line-height: 30px;
             padding-left: 3.5%;
         }
     }
-
 }
