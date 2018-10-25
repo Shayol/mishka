@@ -35,13 +35,14 @@ window.addEventListener('load', function () {
         });
     });
 
-
-    modal.addEventListener('click', (event) => {
-        if (event.target.classList.contains('modal') || event.target.classList.contains('modal__button')) {
-            event.preventDefault();
-            modal.style.display = 'none';
-        }
-    });
+    if (modal) {
+        modal.addEventListener('click', (event) => {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('modal__button')) {
+                event.preventDefault();
+                modal.style.display = 'none';
+            }
+        });
+    }
 
 
 
@@ -84,10 +85,10 @@ window.addEventListener('load', function () {
         });
 
         function onPlayerStateChange(event) {
-            if(event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+            if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
                 playButton.style.display = 'inline-block';
             }
-            if(event.data == YT.PlayerState.PLAYING) {
+            if (event.data == YT.PlayerState.PLAYING) {
                 playButton.style.display = 'none';
             }
         }
